@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery : 1</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+
+
+        $("*").css("font-size","13px");
+        // $("선택자").css("속성","값"); 메서드 함수
+        $("h1").css("color","red");
+        $("#firstTitle").css("color","green");
+        $(".nextTitle").css("color","#00f");
+        $("ul.obj3>li").css("font-weight","bold");
+        $("#wrap h3").css("font-size","20px").css("background-color","yellow"); //체이닝 기법, 하나의 선택자에 같은 메서드를 여러 차례 이어서 작성하는 기법
+        $(".obj1").css({"font-size":"20px","background-color":"yellow","font-style":"italic"});
+        // $(".obj1").css({"속성":"값","속성":"값","속성":"값"});
+
+        $("ul.obj3").children(".theObj1").css({"color":"purple"});
+        //   $("선택자").children("").css({"color":"purple"});
+
+        $("li.obj4").parent().css({"border":"2px dashed #f00"});
+        // $("선택자").parent("") 선택요소를 기준으로 부모요소를 선택
+
+        $(".obj4").next().css({"color":"orange"});
+        //$("선택자").next("").css({"속성":"값"}); 선택요소를 기준으로 뒤에있는 형제요소를 선택
+
+        $(".obj4").prev().css({"text-align":"center"});
+        //$("선택자").prev("").css({"속성":"값"}); 선택요소를 기준으로 앞에있는 형제요소를 선택
+
+        $(".obj6").siblings().css({"text-align":"center"});
+        //$("선택자").siblings().css({"속성":"값"}); 선택요소를 기준으로 앞뒤 형제요소를 선택
+
+        $(":text").css({"background-color":"#ccc","border":"1px solid #000","color":"green"});
+        //폼의 입력요소 input 을 선택할 때 $(":타입");        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    });
+    // 바디에있는 내용을 불러들인다.
+
+    
+</script>
+</head>
+<body>
+    
+<!-- 
+
+[JQuery 제이쿼리]
+
+자바스크립트의 가장 대표적인 라이브러리 언어
+라이브러리 : 그대로 불러와서 사용할 수 있도록 구성된 기능적인 함수나 작은 프로그램들의 집합
+
+다운로드방식 minifired/uncompressed
+(주석, 설명, 줄바꿈이 안되어서 용량이 적다)
+
+인터랙션(상호작용, 특정한 변화)란?
+사용자의 행동에 따라 실시간으로 웹에 어떠한 변화가 일어나는 상황
+
+ -->
+
+
+<div id="wrap">
+    <h1>제이쿼리jquery</h1>
+    <h2 id="firstTitle">선택자</h2>
+    <h3 class="nextTitle">부모 요소 선택자</h3>
+    <div>
+        <p class="obj1">현재 id가 "obj1"인 요소를 기준으로, 부모 요소는 'div'요소입니다.</p>
+    </div>
+    <h3>자식 요소 선택자</h3>
+    <ul class="obj3">
+        <li>리스트1</li>
+        <li class="theObj1">리스트2</li>
+        <li>리스트3</li>
+    </ul>
+    <h3>형 요소 선택자</h3>
+    <ul>
+        <li>리스트4</li>
+        <li class="obj4">리스트5</li>
+        <li>리스트6</li>
+    </ul>
+    <h3>동생 요소 선택자</h3>
+    <ul>
+        <li>리스트7</li>
+        <li class="obj5">리스트8</li>
+        <li>리스트9</li>
+    </ul>
+    <h3>형제 요소들 선택자</h3>
+    <ul>
+        <li>리스트10</li>
+        <li class="obj6">리스트11</li>
+        <li>리스트12</li>
+    </ul>
+    <h3>입력 요소 선택자</h3>
+    <p><label for="user_name">이름</label>
+        <input type="text" name="user_name" id="user_name">
+    </p>
+</div>
+</body>
+</html>
