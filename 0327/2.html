@@ -24,15 +24,30 @@ $("#list1 li:last").css({"color":"green"});
 $("#list1 li").eq(1).css({"font-style":"italic"});
 // n번째! index 번호는 0부터 시작. eq(0)
 
+$("#list1 li:lt(3)").css({"border":"2px dotted aqua"});
+// :lt(3) 작다. 3미만 -> 0,1,2를 나타냄
 
+$("#list1 li:gt(3)").css({"border":"2px dotted purple"});
+// :gt(3) 작다. 3초과 -> 4,5,6을 나타냄
+$("#list2 li:contains('리스트11')").css({"color":"red"});
+// :contains('내용문자열') 내용문자열이 포함되어 있을 경우선택 따옴표 주의!!
 
+$("#list2 li:has('span')").css({"color":"aqua"});
+//:has('태그') 태그를 포함하는 경우 선택
 
+$("#list2 li").find("a").css({"background-color":"red"});
+//.find("하위요소") 선택자의 하위요소를 선택
 
+$("#list2 li").not(".theObj").css({"color":"red"});
+//.not("") 특정요소만 제외하고 나머지에 적용
 
+$("#list2 li").filter(".theObj").css({"font-size":"20px"});
+//.filter("") 특정요소만 적용
 
-
-
-
+$("h2").click(function () { 
+    $("#list1").slideToggle("fast");
+    
+});
 
 });
     </script>
