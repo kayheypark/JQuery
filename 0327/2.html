@@ -45,9 +45,50 @@ $("#list2 li").filter(".theObj").css({"font-size":"20px"});
 //.filter("") 특정요소만 적용
 
 $("h2").click(function () { 
-    $("#list1").slideToggle("fast");
     
 });
+
+$("h2.theTitle").html("<a href='#''>요소 객체 조작</a>");
+// .html() 하위요소를 불러오는것, 내용 새로 바꾼다
+
+$(".obj1").text("리스트2");
+//.text() 요소에 텍스트를 불러오는 것, 새 텍스트로 바꿉니다.
+
+$("ul#list3").append("<li>리스트6</li>");
+// .append() 선택자의 마지막 자식요소 위치에 새 요소 추가.
+
+$("ul#list3").prepend("<li>리스트1</li>");
+// .prepend() 선택자의 첫 자식요소 위치에 새요소 추가.
+
+$("<li>새요소1</li>").insertBefore($("ul#list3 li").eq(4));
+//(새요소).insertBefore(요소선택)
+
+$("<li>새요소2</li>").insertAfter($("ul#list3 li").eq(5));
+//(새요소).insertAfter(요소선택)
+
+$("li.obj1").clone().appendTo("ul#list3");
+//.clone()복제해서, .appendTo() ~에 맨 마지막 위치에 추가
+
+$("ul#list3 li").eq(0).remove();
+// 인텍스 0번째 삭제
+
+$("ul#list3 li").eq(0).attr("class");
+//.attr("") 클래스 값을 반환
+
+$("ul#list3 li").eq(0).attr("class","obj2");
+//attr("속성명","속성값") 클래스값을 새로 바꿔준다. attribute 속성
+//attr({"":"","":"","":""}) 여러개의 속성과 값을 바꿀 경우 {}사용
+
+$("li.obj2").css("background","yellow");
+$("ul#list3 li").eq(0).addClass("obj3");
+$("li.obj3").css("color","red");
+
+$("li.obj3").eq(0).removeClass("obj3");
+//.removeClass() 클래스삭제
+
+$("ul#list3 li").eq(0).toggleClass("obj3");
+//없으면 추가, 있으면 제거 클래스 추가, 삭제
+    
 
 });
     </script>
@@ -77,7 +118,7 @@ $("h2").click(function () {
 
         <h2 class="theTitle">html 조작</h2>
         <ul id="list3">
-            <li class="boj1">list_2</li>
+            <li class="obj1">list_2</li>
             <li>list_3</li>
             <li>list_4</li>
             <li>list_5</li>
