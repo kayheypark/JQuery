@@ -1,0 +1,58 @@
+@import url(reset.css);
+/* main.css*/
+
+/*common*/
+body {font-size: 12px; font-family: Dotum,"돋움",sans-serif; color: #666;
+background: #e4e4e4 url(../images/bgbg.gif) repeat-x 0 78px;}
+a:link, a:visited {text-decoration: none; color: #666;}
+a:hover, a:active, a:focus {text-decoration: underline; color: #000;}
+th, strong {font-weight: bold;}
+
+/*레이아웃*/
+#wrap {width: 950px; padding: 10px 10px 50px; margin: 0 auto; border: 1px solid red;}
+    #header {width: 950px; height: 100px; border: 1px solid blue;}
+    #container {width: 950px; padding: 95px 0; border: 1px solid green;}
+    #container:after {content: ""; display: block; clear: both;}
+        .snb {float: left; width: 206px;border: 1px solid red;}
+        #content {float: right; width: 700px; border: 1px solid red;}
+    #footer {width: 700px; height: 45px; padding: 15px 0 15px 250px; background: #fff;}
+
+/* 헤더 */
+/* 로고 */
+h3.logo {float: left;}
+/* 탑메뉴 */
+dl.topMenu {float: right;}
+dl.topMenu dd {display: inline;}
+/* 주메뉴 */
+ul.gnb {position: relative; clear: both; border: 1px solid red;}
+.gnb li {float: left; padding: 0 30px;}
+.gnb li a {color: #fff;}
+.sub {position: absolute; left: 0; top: 33px;}
+.sub li {padding-right: 0;}
+.sub li a {color: #000;}
+
+/* 컨테이너 */
+/* snb */
+ul.nav li {background: url(../images/submenu_line.gif) no-repeat 0 100%; line-height: 30px;}
+ul.nav li a {background: url(../images/icon4.gif) no-repeat 10px 50%; padding-left: 20px;}
+
+/* 컨텐트 */
+p.path {text-align: right;}
+#content h3 {margin: 20px 0;}
+
+/* 웹접근성 이란 */
+div.txt {background: url(../images/contents_bg.gif) no-repeat 0 0; padding-left: 220px;}
+div.txt p {line-height: 1.5; padding-bottom: 15px; text-align: justify;}
+
+/* 인증사이트 통계 */
+table.siteTable {width: 100%;}
+.siteTable th, .siteTable td {border-bottom: 1px solid #666; text-align: center; padding: 5px 0;}
+.line th {border-top: 3px solid #666; border-bottom: 2px solid gray;}
+
+/* 진행절차 */
+ol.apply {width: 100%; overflow: auto;}
+ol.apply li {float: left;}
+
+/* footer */
+ul.etc {margin-bottom: 10px;}
+ul.etc li {display: inline;}
