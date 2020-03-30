@@ -1,0 +1,16 @@
+@import url(reset.css);
+/* main.css */
+
+/* common */
+body {font-size: 12px; font-family: Dotum, "??", sans-serif; color: #666; text-align: center;}
+
+/* layout */
+#wrap {width: 980px; margin: 0 auto; text-align: left; border: 1px solid red;}
+	#header {}
+	#container {width: 980px;}
+	#container:after {content: ""; display: block; clear: both;}
+		.snb {float: left; width: 130px; padding: 0 10px; border: 1px solid green;}
+		#content {float: right; width: 770px; border: 1px solid blue;}
+#footer {}
+
+/* ?? */
