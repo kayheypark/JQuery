@@ -1,0 +1,76 @@
+@import url(reset.css);
+/* main.css */
+/* common */
+body{font-size:12px;font-family:Dotum,"돋움",sans-serif;color:#666;
+	text-align:center;}
+
+/* layout */
+#wrap{width:980px;margin:0 auto;text-align:left;border:1px solid red;}
+	#header{}
+	#container{width:980px;}
+	#container:after{content:"";display:block;clear:both;}
+		.snb{float:left;width:130px;padding:0 10px;border:1px solid green;}
+		#content{float:right;width:770px;border:1px solid blue;}
+	#footer{}
+
+/* header */
+
+/* container */
+/* snb */
+.snb .side_logo{margin:20px 0;}
+.nav li{border-bottom:1px solid gray;}
+.snb h3{margin:20px 0 10px;}
+.snb input{width:100px;height:15px;margin:3px 0;}
+.snb .log_btn{width:20px;height:20px;}
+
+/* content */
+#content h2{margin-bottom:20px;}
+
+/* 블로거 소개 */
+.bloger{width:770px;}
+.bloger:after{content:"";display:block;clear:both;}
+.bloger dt{float:right;width:610px;font-size:120%;padding-bottom:20px;}
+.bloger dt strong{color:#fc9;}
+.bloger dd img{float:left;width:135px}
+.bloger dd.txt{float:right;width:610px;line-height:150%;}
+
+/* 질문과답변 */
+.qna dt{background:url(../images/ico_q.gif) no-repeat 0 15px;padding:15px 0 15px 20px;}
+
+.qna dd{background:url(../images/ico_a.gif) no-repeat 0 0;padding-left:20px;line-height:150%;}
+
+/* 레시피 */
+#content h3{margin:10px 0;}
+div.recipe{width:770px;padding-bottom:40px;}
+div.recipe:after{content:"";display:block;clear:both;}
+
+dl.float_L{float:left;width:345px;padding-bottom:10px;border-right:2px dashed #99c;
+	padding-right:30px;}
+dl.float_L dt{float:right;width:241px;padding-bottom:5px;font-weight:bold;}
+dl.float_L dd img{float:left;width:96px;}
+dl.float_L dd.txt{float:right;width:241px;line-height:120%}
+
+dl.float_R{float:right;width:360px;padding-bottom:10px;}
+dl.float_R dt{float:right;width:260px;padding-bottom:5px;font-weight:bold;}
+dl.float_R dd img{float:left;width:96px;}
+dl.float_R dd.txt{float:right;width:260px;line-height:120%}
+/* float를 감싸고 있는 것에 높이 지정하기 - 
+1. height
+2. float
+3. overflow:auto, overflow:hidden;
+4. 공갈div에 clear:both;
+5. :after{content:"";display:block;clear:both;}
+*/
+
+/* 덧글남기기 */
+form.reply{width:770px;padding:20px 0 50px;border-top:1px solid gray;}
+form.reply p.scrap{float:left;}
+form.reply p.addr{float:right;margin-bottom:10px;}
+
+fieldset.repl{clear:both;width:731px;height:86px;text-align: right;padding-right:30px;
+	margin-left:10px;padding-top:20px;
+	background:url(../images/bg_reply_box.gif) no-repeat 0 0;}
+label.write{padding-right:10px;}
+.reply_input{width:500px;height:45px;margin-right:10px;}
+
+/* footer */
