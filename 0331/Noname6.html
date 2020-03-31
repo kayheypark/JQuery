@@ -27,15 +27,35 @@
         $(document).ready(function(){
 
             $("#leftBtn").click(function(){
-            $("#box2").animate({"background-color":"green","left":"0"},500,"linear");
+            $("#box2").stop().animate({"background-color":"green","left":"-=100px"},500,"linear");
 
             })
 
 
             $("#rightBtn").click(function(){
-            $("#box2").animate({"background-color":"red","left":"100px"},500,"linear");
+            $("#box2").stop().animate({"background-color":"red","left":"+=100px"},500,"linear");
 
             })
+            $("#downBtn").click(function(){
+            $("#box2").clearQueue().animate({"background-color":"red","top":"+=100px"},500,"linear");
+
+            })
+            $("#upBtn").click(function(){
+            $("#box2").clearQueue().animate({"background-color":"red","top":"-=100px"},500,"linear");
+
+            })
+
+
+            //stop() 현재 진행중인 효과정지
+            //버튼을 여러번 클릭하니까 요소가 혼자서 움직이는 현상 없앨 때 사용
+
+
+            //clearQueue() 큐에 쌓인 효과들을 삭제.
+            //여러번 클릭하니까 요소가 혼자서 움직이는 현상 없앨때 사용
+
+
+
+
 
         });
 
@@ -50,6 +70,8 @@
     <p>
         <button id="leftBtn">left</button>
         <button id="rightBtn">right</button>
+        <button id="upBtn">up</button>
+        <button id="downBtn">down</button>
     </p>
 
 </body>
