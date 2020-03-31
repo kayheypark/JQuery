@@ -31,7 +31,25 @@
             $(this).parent().next().slideDown();
         });
         $("#btn6").click(function(){
-            $(this).parent().next().slideToggle();
+            $(this).parent().next().slideToggle(fast);
+        });
+
+        $("#btn7").click(function(){
+            $(this).parent().next().fadeOut(1000);
+        });
+        $("#btn8").click(function(){
+            $(this).parent().next().fadeIn(1000);
+        });
+        $("#btn9").click(function(){
+            $(this).parent().next().fadeToggle(1000);
+        });
+
+        $("#btn10").click(function(){
+            $(this).parent().next().fadeTo("slow",0.3);
+        });
+
+        $("#btn11").click(function(){
+            $(this).parent().next().fadeTo("fast",1.0);
         });
 
         /*
@@ -84,10 +102,12 @@
 
         <h2>fadeIn/fadeOut</h2>
         <p>
-        <button id="btn7">fadeIn</button>
-        <button id="btn8">fadeOut</button>
+        <button id="btn7">fadeOut</button>
+        <button id="btn8">fadeIn</button>
         <button id="btn9">fadeToggle</button>
         </p>
+         <p>페이드 아웃은 선택요소를 천천히 사라지게 만듭니다. <br>
+        페이드인은 선택요소를 천천히 나타나게 만듭니다.</p>
 
         <h2>fadeTo 효과</h2>
         <p>
