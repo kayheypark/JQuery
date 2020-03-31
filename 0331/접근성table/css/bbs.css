@@ -1,0 +1,16 @@
+@import url(../css/reset.css);
+
+/*common*/
+body {font-size: 12px; font-family: Dotum,"돋움",sans-serif; color: #333;}
+a {text-decoration: none; color: #666666;}
+a:hover {text-decoration: underline;}
+
+/* layout */
+#wrap {}
+    #header {}
+    #container {}
+        .snb {}
+        #content {position: relative; width: 640px; /*border:solid 1px red*/}
+    #footer {}
+
+/* content */

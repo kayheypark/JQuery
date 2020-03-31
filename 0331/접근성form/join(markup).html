@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<title> new document </title>
+</head>
+<body>
+
+<div id="content">
+	<h2>기본 회원 정보</h2>
+	<p><img src="images/icon2.gif" alt="필수" />표시 필수 입력사항</p>
+	<form action="" method="post">
+	<fieldset>
+	<legend>기본회원정보</legend>
+	<table summary="미리내 홈페이지 회원가입 양식">
+		<caption>기본회원정보</caption>
+		<tbody>
+		<tr>
+			<th scope="row" class="line"><img src="images/icon2.gif" alt="필수" /> <label for="username">한글이름</label></th>
+			<td class="line"><input type="text" id="username" value="홍길동" readonly="readonly" />반드시 실명을 입력해주시기 바랍니다.</td>
+		</tr>
+		<tr>
+			<th scope="row"><img src="images/icon2.gif" alt="필수" /> <label for="userEname">영문이름</label></th>
+			<td><input type="text" id="userEname" disabled="disabled" />여권에 등록된 영문이름과 동일하게 작성해 주세요</td>
+		</tr>
+		<tr>
+			<th scope="row"><img src="images/icon2.gif" alt="필수" /> <label for="userid">회원 아이디</label></th>
+			<td><input type="text" id="userid" /><input type="image" src="images/overalp.jpg" alt="중복검사" /></td>
+		</tr>
+		<tr>
+			<th scope="row"><img src="images/icon2.gif" alt="필수" /> <label for="userpwd">회원 비밀번호</label></th>
+			<td><input type="password" id="userpwd" />영문, 숫자 조합으로 6~12자 이내</td>
+		</tr>
+		<tr>
+			<th scope="row"><img src="images/icon2.gif" alt="필수" /> <label for="userpwdch">비밀번호 확인</label></th>
+			<td><input type="password" id="userpwdch" /></td>
+		</tr>
+		<tr>
+			<th scope="row"><img src="images/icon2.gif" alt="필수" /> <label for="userEmail1">신청자 E-Mail</label></th>
+			<td><input type="text" id="userEmail1" title="이메일 아이디 입력"/> &#64; <input type="text" id="userEmail2" title="이메일 서비스 회사 입력" />
+			<select title="이메일 서비스 회사 직접입력">
+			<option value="choice">직접입력</option>
+			<option value="naver.com">naver.com</option>
+			<option value="daum.net">daum.net</option>
+			</select>
+			<input type="image" src="images/overalp.jpg" alt="중복검사" />
+			<span> 허위기재시 비밀번호 찾기 등을 이용할 수 없습니다.</span></td>
+		</tr>
+		<tr>
+			<th scope="row"><img src="images/icon2.gif" alt="필수" /> <label for="Addsnumber">우편번호</label></th>
+			<td><input type="text" id="Addsnumber" title="우편번호 앞자리" /> - <input type="text" id="Addsnumber2" title="우편번호 뒷자리" /><input type="image" src="images/post.jpg" alt="우편번호 찾기" /></td>
+		</tr>
+		<tr>
+			<th scope="row"><img src="images/icon2.gif" alt="필수" /> <label for="userAdds1">주소</label></th>
+			<td><input type="text" id="userAdds1" size="50" /></td>
+		</tr>
+		<tr>
+			<th scope="row"><img src="images/icon2.gif" alt="필수" /> <label for="userAdds2">영문주소</label></th>
+			<td><input type="text" id="userAdds2" size="50" /></td>
+		</tr>
+		<tr>
+			<th scope="row"><img src="images/icon2.gif" alt="필수" /> <label for="userPhone1">신청자 전화번호</label></th>
+			<td><input type="text" id="userPhone1" />허위 기재시 긴급 공지사항 등을 전달 할 수 없습니다.</td>
+		</tr>
+		<tr>
+			<th scope="row"><img src="images/icon2.gif" alt="필수" /> <label for="userPhone2">신청자 휴대전화</label></th>
+			<td><input type="text" id="userPhone2" /></td>
+		</tr>
+		<tr>
+			<th scope="row"><img src="images/icon2.gif" alt="필수" /> 이메일 수신여부</th>
+			<td><input type="radio" name="receive" id="agreement" /><label for="agreement">동의</label>
+			<input type="radio" name="receive" id="cancel" /><label for="cancel">거부</label> | 약관변경 및 공지성 메일은 수신거부 회원에세도 발송됩니다.</td>
+		</tr>
+	</tbody>
+	</table>
+	</fieldset>
+	</form>
+</div> 
+</body>
+</html>
