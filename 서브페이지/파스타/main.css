@@ -1,0 +1,57 @@
+@import url(reset.css);
+/* main.css */
+
+/* common */
+body{font-size:12px;font-family:Dotum,"돋움",sans-serif;text-align:center;}
+a{text-decoration:none;color:#666;}
+h2,h4,strong{font-weight: bold;}
+
+/* layout */
+#wrap{width:956px;margin:0 auto;text-align:left;border:1px solid red;}
+	#header{width:956px;padding:5px 0;border-bottom:1px dashed #ccc;
+			background:url(../images/logo_bg.gif) repeat-x 0 0;}
+	#container{width:956px;padding-top:20px;}
+	#container:after{content:"";display:block;clear:both;}
+		.snb{float:left;width:135px;border:1px solid red;}
+		#content{float:right;width:800px;border:1px solid red;}
+	#footer{}
+
+/* header */
+
+/* container */
+/* snb */
+.snb h2{font-size:24px;padding-bottom:8px;}
+.snb li{border-top:1px solid #ccc;line-height:250%;}
+.snb li a{font-weight:bold;}
+.snb li a:hover{color:#ff3300;}
+
+/* content */
+#content h2{padding-bottom:15px;border-bottom:1px solid #ccc;}
+#content p.txt{padding:20px 0;line-height:20px;text-align:justify;}
+#content p.txt img{float:left;padding-right:10px;}
+#content p.txt span{display:block;}
+
+/* 키워드 */
+div.onkywd{position: relative; float:left;width:338px;height: 425px;
+	background:url(../images/tue_list_bg.gif) no-repeat 0 0;}
+div.onkywd h4{font-size:20px;text-align:center;margin:20px 0 10px;}
+div.onkywd h4 span{color:#ff3300;}
+div.onkywd ol{margin-left: 53px;}
+div.onkywd ol li{line-height:32px;}
+div.onkywd ol li a{position: absolute;right: 25px;}
+
+/* 파스타 메뉴 */
+dl.menu1{float:right;width:430px;}
+dl.menu1 dt img,dl.menu2 dt img{float: left;padding-right:10px;}
+dl.menu1 dt strong,dl.menu2 dt strong{padding-bottom:5px;display: block;}
+dl.menu1 dd,dl.menu2 dd{line-height:160%;text-align:justify;}
+dl.menu1 .more a,dl.menu2 .more a{color:#ff3300;}
+dl.menu1 .more,dl.menu2 .more{padding:10px 0;}
+
+dl.menu2{clear:both;padding-top:30px;}
+
+/* 블로그 담기 */
+p.blog{padding:20px;background:url(../images/bu_arw1.gif) no-repeat 0 20px;
+	border-top:1px solid #ccc;}
+
+/* footer */
