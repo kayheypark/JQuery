@@ -1,0 +1,28 @@
+@import url(reset.css);
+/* main.css */
+
+/* common */
+body{font-size:12px;font-family:Dotum,"돋움",sans-serif;color:#666;
+	background:#e4e4e4 url(../images/bgbg.gif) repeat-x 0 78px;}
+a:link,a:visited{text-decoration:none;color:#666;}
+a:hover,a:active,a:focus{text-decoration:underline;color:#000;}
+th,strong{font-weight: bold;}
+
+/* layout */
+
+/* header */
+/* 로고 */
+
+
+
+
+/* container */
+/* snb */
+
+/* content */
+
+
+
+/* 퍼가기 */
+ul.etc{margin-bottom:10px;}
+ul.etc li{display:inline;}
