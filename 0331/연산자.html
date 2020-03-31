@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 연산자</title>
+    <script type="text/javascript">
+    //<![CDATA[
+        //연산자
+        //1. 산술연산자, 이항연산자 + - / * %(나머지)
+        document.write("<hr />");
+
+
+        var A = 10;
+        var B = 3;
+        var result;
+
+        result = A + B;
+        document.write(result + "<br />");
+  
+        result = A - B;
+        document.write(result + "<br />");
+  
+        result = A * B;
+        document.write(result + "<br />");
+  
+        result = A / B;
+        document.write(result + "<br />");
+  
+        result = A % B;
+        document.write(result + "<br />");
+
+
+        // 2. 비교연산자  - 값 : true참, false,거짓
+        // A > B
+        // A>=B A<B, A<=B, A==B 데이터타입일치x, A!=B,
+        // A===B 데이터타입일치o , A!==B
+
+        var A = 10;
+        var B = 3;
+        var C = "10";
+        var result;
+
+
+        result = A>B;
+        document.write(result + "<br />");
+
+        result = A<B;
+        document.write(result + "<br />");
+        
+        result = A==B; // 값이 같음
+        document.write(result + "<br />");
+
+        result = A!=B;
+        document.write(result + "<br />");
+        
+        result = A==C;
+        document.write(result + "<br />");
+
+        result = A===B; // 데이터타입마저 같음
+        document.write(result + "<br />");
+
+        result = A!==B; // 데이터타입고려 다를경우
+        document.write(result + "<br />");
+
+
+        //3. 대입연산자
+        // = += -= *= /= %=
+        document.write("<hr />");
+
+        var numA = 10;
+        var numB = 20;
+
+        numA += 5; // numA=numA+5
+        document.write(numA + "<br />");
+        
+        numA -= 5; // numA=numA-5
+        document.write(numA + "<br />");
+        
+        numA *= 5; // numA=numA*5
+        document.write(numA + "<br />");
+
+        numA /= 5;
+        document.write(numA + "<br />");
+
+        numB %= 5; // 나머지. numB = numB%5 5로 나눴을때 딱떨어져서 나머지는 0이 나온다.
+        document.write(numB + "<br />");
+
+        //4. 증감연산자 ++ 1씩증가, -- 1씩 감소
+        document.write("<hr />");
+        var numA = 10;
+        var numB = 20;
+
+        numA++;
+        document.write(numA + "<br />");
+        
+        numB--;
+        document.write(numB + "<br />");
+
+        //5.논리연산자 ||논리합(or), &&논리곱(and), !논리부정 - true참1, false거짓0
+        document.write("<hr />");
+
+        // true || true -> true
+        // ture || flase -> ture
+        // false || false -> false
+
+        // true && true -> true
+        // ture && flase -> false
+        // false && false -> false
+
+        var A = 10;
+        var B = 20;
+        var C = 30;
+        var D = 40;
+
+        var num1 = A>B; // f
+        var num2 = C>=D; // f
+
+            var a = num1 || num2; // f
+            document.write(a+"<br />");
+
+            var b = num1 && num2; // f
+            document.write(b+"<br />");
+
+            var c = !num1; //t
+            document.write(c+"<br />");
+
+        var num1 = A>=B; // f
+        var num2 = C<=D; // t
+
+            var d = num1 || num2; //t
+            document.write(d+"<br />");
+            var e = num1 && num2; // f
+            document.write(e+"<br />");
+            var f = !num1; // t
+            document.write(f+"<br />");
+
+        var num1 = A<=B; // t
+        var num2 = C<D; // t
+
+            var g = num1 || num2; //t
+            document.write(g+"<br />");
+            var h = num1 && num2; //t
+            document.write(h+"<br />");
+            var i = !num1; //f
+            document.write(i+"<br />");
+
+        //문제- 20대 여성 True
+        // prompt메서드
+        // prompt("질문내용","기본답변제시"); - 당신의 성별은?, 여성
+        // prompt("질문내용","기본답변제시"); - 당신의 나이는?, 20
+        
+        // var gender = prompt("성별?","여자");
+        // var age = prompt("나이(숫자만)?","20");
+        // var result = gender=="여성" && age>=20 && age<30; //20대여성
+        // document.write(result + "입니다.");
+
+        //국어, 영어, 수학 점수 입력받고, 평균이 70점이상 이고 각과목점수가 60이상이면 true
+        // Number(prompt("문자열","")); //Number()
+        document.write("<hr /><h2>점수 계산기</h2><br /><strong>[통과기준] 평균 : 70점. 과락 : 60</strong> <br/ ><br /> ");
+
+        var kor = Number(prompt("국어 점수를 입력해주세요","100"));
+        var eng = Number(prompt("영어 점수를 입력해주세요","100"));
+        var math = Number(prompt("수학 점수를 입력해주세요","100"));
+
+        var avr =  (kor+eng+math)/3
+        var result = avr>=70 && kor>=60 && eng>=60 && math>=60
+
+        if (result==true) {
+            var result = "합격";
+            }
+        else{
+            result="불합격";
+            }
+            
+    
+
+
+        document.write("국어 : " + kor + "점 <br/ >"+
+                        "영어 : " + eng + "점 <br/ >"+
+                        "수학 : " + math + "점 <br/ >"+
+                        "평균 : " + avr + "점 <br /><br />" + 
+                        "결과 : "+result);
+
+        
+
+
+
+
+  
+
+
+    //]]>
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
