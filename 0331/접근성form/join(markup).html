@@ -3,19 +3,20 @@
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <title> new document </title>
+<link type="text/css" rel="stylesheet" href="css/join.css" />
 </head>
 <body>
 
 <div id="content">
 	<h2>기본 회원 정보</h2>
-	<p><img src="images/icon2.gif" alt="필수" />표시 필수 입력사항</p>
+	<p class="txt"><img src="images/icon2.gif" alt="필수" />표시 필수 입력사항</p>
 	<form action="" method="post">
 	<fieldset>
-	<legend>기본회원정보</legend>
+	<legend class="blind">기본회원정보</legend>
 	<table summary="미리내 홈페이지 회원가입 양식">
-		<caption>기본회원정보</caption>
+		<caption class="blind">기본회원정보</caption>
 		<tbody>
-		<tr>
+		<tr class="line">
 			<th scope="row" class="line"><img src="images/icon2.gif" alt="필수" /> <label for="username">한글이름</label></th>
 			<td class="line"><input type="text" id="username" value="홍길동" readonly="readonly" />반드시 실명을 입력해주시기 바랍니다.</td>
 		</tr>
@@ -48,7 +49,7 @@
 		</tr>
 		<tr>
 			<th scope="row"><img src="images/icon2.gif" alt="필수" /> <label for="Addsnumber">우편번호</label></th>
-			<td><input type="text" id="Addsnumber" title="우편번호 앞자리" /> - <input type="text" id="Addsnumber2" title="우편번호 뒷자리" /><input type="image" src="images/post.jpg" alt="우편번호 찾기" /></td>
+			<td><input type="tel" id="Addsnumber" title="우편번호 앞자리" /> - <input type="tel" id="Addsnumber2" title="우편번호 뒷자리" /><input type="image" src="images/post.jpg" alt="우편번호 찾기" /></td>
 		</tr>
 		<tr>
 			<th scope="row"><img src="images/icon2.gif" alt="필수" /> <label for="userAdds1">주소</label></th>
@@ -73,6 +74,8 @@
 		</tr>
 	</tbody>
 	</table>
+	<input type="submit" value="확인" />
+	<input type="reset" value="취소" />
 	</fieldset>
 	</form>
 </div> 

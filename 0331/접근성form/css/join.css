@@ -1,0 +1,20 @@
+@import url(reset.css);
+/* reset.css */
+
+/* common */
+body {font-size: 12px; font-family: Dotum, "돋움", sans-serif;}
+
+/* layout */
+#content {position: relative; width: 700px; margin: 10px;}
+
+/* content */
+#content h2 {background: url(../images/icon.jpg) no-repeat 0 0; font-size: 16px;
+padding-left: 20px;}
+#content p.txt {position: absolute; right: 0; top: 0;}
+
+#content th, #content td {border: 1px solid #c0c0c0;}
+.line th, .line td {border-top: 3px solid gray;}
+#content input {margin: 5px;}
+#content th {width: 130px; background-color: #e8e8e8; border-right: 1px solid #c0c0c0;
+text-indent: 5px;}
+#content span {display: block; text-indent: 5px;}
