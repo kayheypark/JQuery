@@ -15,3 +15,19 @@ a:hover {text-decoration: underline;}
 
 /* content */
 .path {text-align: right;}
+#content h2 {border-bottom: 1px dotted #ccc;}
+
+p.pNumber {float: left;padding-top: 20px;}
+#content form {float: right;}
+
+#content table {clear: both; width: 100%;}
+#content th {height: 31px; text-align: center; font-weight: bold;
+background: url(../images/thM.gif) no-repeat 0 0;}
+#content th:first-child {width: 60px; background: url(../images/thL.gif) no-repeat 0 0;}
+#content th:last-child {width: 60px; background: url(../images/thR.gif) no-repeat 100% 0;}
+#content td {text-align: center; line-height: 1.8;
+background: url(../images/bgSubMenu.gif) repeat-x 0 100%;}
+#content td:nth-child(2) {text-align: left; padding-left: 20px;}
+
+p.page {text-align: center; padding: 10px 0;}
+p.page a {padding: 0 5px;}
