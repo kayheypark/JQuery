@@ -153,10 +153,10 @@
         // prompt("질문내용","기본답변제시"); - 당신의 성별은?, 여성
         // prompt("질문내용","기본답변제시"); - 당신의 나이는?, 20
         
-        var gender = prompt("성별?","여자");
-        var age = prompt("나이(숫자만)?","20");
-        var result = gender=="여성" && age>=20 && age<30; //20대여성
-        document.write(result + "입니다.");
+        // var gender = prompt("성별?","여자");
+        // var age = prompt("나이(숫자만)?","20");
+        // var result = gender=="여성" && age>=20 && age<30; //20대여성
+        // document.write(result + "입니다.");
 
 
 
@@ -190,6 +190,46 @@
         //                 "결과 : "+result);
 
         
+        // 문자결합 연산자
+        // "문자" + "문자", "문자" + "숫자" , string(숫자) + 숫자
+        document.write("<hr />");
+        var txt1 = "아름다운";
+        var txt2 = "우리강산";
+        document.write(txt1 + txt2 + "<br />");
+
+        var txt3 = "은하철도";
+        var txt4 = 999
+        document.write(txt3 + txt4 + "<br />");
+
+        var num1 = 200;
+        var num1 = 300;
+        var txt5 = String(num1);
+        document.write(num1+num2+txt5+"<br />");
+
+        var addText = "2002월드컵";
+        addText += "대한민국";
+        addText += "짝짝~짝짝~!!";
+        document.write(addText + "<br />");
+
+
+
+
+
+
+
+
+        // 조건 연산자, 삼항연산자, 조건식? 실행문1 : 실행문2 ;
+        // var num1 = 30;
+        // var num2 = 20;
+
+        // num1 > num2 ? alert("참이다") : alert("거짓이다");
+
+        //confirm("내용"), 확인-true값반환, 취소-false값반환
+        document.write("<hr />");
+        var result = confirm("Do you like Javascript?");
+        var theText = result ? "good":"No-good";
+
+        document.write(theText);
 
 
 
