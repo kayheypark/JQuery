@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - 제어문</title>
+    <script type="text/javascript">
+    //<![CDATA[
+        //조건문 if 만약~라면
+        /*
+        
+            if(조건식){
+                실행문;
+            }
+        
+        */
+
+        var MyAge = 25 ;
+        if(MyAge>20){
+            document.write("당신은 성인입니다."+"<br />");
+
+            
+        }else {
+            document.write("어리군");
+        }
+        
+
+        //prompt사용 시험점수 받고, 70이상이면 합격 메시지 출력
+        document.write("<hr />1. prompt사용 시험점수 받고, 70이상이면 합격 메시지 출력<br />");
+        var score = prompt("1. 시험점수를 입력해주세요",70);
+        if (score>=70){ 
+            document.write("합격"+"<br/>");
+
+        }else{
+            document.write("불합격"+"<br/>");
+        }
+
+
+        // if~else문
+        
+        /*
+        if(조건식1){
+            실행문1;
+        }else if(조건식2){
+            실행문2;
+        }else{
+            실행문3;
+        }
+
+        */
+        
+        //나이가 20세 이상이고, 30세 미만일 경우 통과, 그외 비통과
+        document.write("<hr />2. 나이가 20세 이상이고, 30세 미만일 경우 통과, 그외 비통과<br />");
+        var age = prompt("2. 나이를 입력해주세요",25);
+        if(age>=20&&age<30){document.write("통과"+"<br />");}else{document.write("비통과"+"<br />")};
+
+        //학점90점 이상 A학점,학점80점 이상 B학점,학점70점 이상 C학점,학점60점 이상 D학점, 60점미만 F
+        document.write("<hr />3. 학점90점 이상 A학점,학점80점 이상 B학점,학점70점 이상 C학점,학점60점 이상 D학점, 60점미만 F<br />");
+        var scoreUniv = prompt("3. 학점을 입력해주세요","100");
+        
+        if(scoreUniv>=90){
+            document.write("A학점" + "<br />");
+        }else if(scoreUniv>=80){
+            document.write("B학점" + "<br />");
+        }else if(scoreUniv>=70){
+            document.write("C학점" + "<br />");
+        }else if(scoreUniv>=60){
+            document.write("D학점" + "<br />");
+        }else{
+            document.write("F학점 -_-" + "<br />");
+        }
+
+        /* switch ~ case 문, 지정한 변수에 저장된 데이터와 정확히 일치하는 경우 case
+            var num =3;
+            switch(num){
+                case 1:
+                        실행문1;
+                        break;
+                case 2:
+                        실행문1;
+                        break;
+                case 3:
+                        실행문1;
+                        break;
+                default:
+                        실행문4;
+            }
+        
+        */
+        //지역번호 알려주는 프로그램. 지역을 입력하세요, 서울 02, 경기031 부산051 등록되지 않은 지역입니다.
+        document.write("<hr />4. 지역번호 알려주는 프로그램<br />");
+        var city = prompt("거주지역을 입력하세요(서울,경기,부산)","서울");
+        var areaNum;
+
+        switch(city){
+            case "서울" :
+                        areaNum = "02";
+                        break;
+            case "경기" :
+                        areaNum = "031";
+                        break;
+            case "부산" :
+                        areaNum = "051";
+                        break;
+            default : document.write("다른 지역을 선택해주세요 (서울, 경기, 부산 중)"+"<br />");           
+        }
+
+        document.write(city + "의 지역번호는 " + areaNum + "입니다." + "<br />");
+
+ 
+
+
+
+
+
+    //]]>
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
