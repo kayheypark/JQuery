@@ -8,13 +8,30 @@
     <link type="text/css" rel="stylesheet" href="css/gnb.css" />
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
-        $(function () {
+        $(function() {
          //<![CDATA[
+             $("nav>ul>li>a").bind("mouseover focus",function(){
+                $(".header_wrap").animate({"height":"200px"},300,"linear");
+
+                $("nav>ul>li>ul").css("display","none");
+                $(this).next().css("display","block");
+
+                $("nav>ul>li").removeClass("on");
+                $(this).parent().addClass("on");
+
+             });
+
+            $("nav").bind("mouseleave blur",function(){
+                $(".header_wrap").stop().animate({"height":"30px"},300,"linear");
+                $("nav>ul>li>ul").css("display","none");
+
+                $("nav>ul>li").removeClass("on");
+
+            });
 
 
 
 
-         
 
          //]]>
         });
@@ -22,8 +39,8 @@
 </head>
 
 <body>
+    <div class="header_wrap">
     <header><!--w:100%, p:r-->
-        
         <div class="header_inner"> <!--m:0 auto-->
            
             <h1 class="blind">로고</h1>
@@ -76,6 +93,7 @@
             <!-- //gnb -->
         </div>
     </header>
+</div>
 </body>
 
 </html>

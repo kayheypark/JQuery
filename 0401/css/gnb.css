@@ -20,7 +20,18 @@ header {position: relative; width: 100%; height: 30px; background: #000;}
  nav > ul > li:first-child > ul {left: 0;}
  nav > ul > li:nth-child(2) > ul {left: 120px;}
  nav > ul > li:nth-child(3) > ul {left: 240px;}
- nav > ul > li:nth-child(4) > ul {left: 260px;}
+ nav > ul > li:nth-child(4) > ul {left: 360px;}
  nav > ul > li:last-child > ul {left: 480px;}
+
+nav >ul>li>a {position: relative; display: inline-block; width: 100%;}
+ nav > ul > li > a::after {content: ""; opacity: 0;
+                            position: absolute; left: 50%; bottom: 0;
+                            width: 0; height: 0; background: yellow;
+                            transform: translate(-50%, 0);
+                            transition: width .4s ease-in-out;
+
+}
+
+ nav > ul > li.on > a::after {content: ""; opacity: 1; width: 100%; height: 3px;}
 
  
