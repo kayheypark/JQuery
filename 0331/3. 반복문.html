@@ -102,6 +102,37 @@
             }
             
             }
+
+        //중첩 for 문
+        document.write("<br /><hr />7. 중첩 for문 <br />");
+        for (var k=2;k<=9;k++){
+
+            document.write("<h1>"+k+"단</h1>");
+            for(var m=1;m<=9;m++){
+                document.write(k+"*"+m+"="+(k*m)+"<br />");
+
+            }
+            
+        }
+
+        //break문 - 해당 반복문을 종료
+        document.write("<br /><hr />8. break문 <br />");
+        for(var i =1;i<=10;i++){
+            document.write(i+"<br />");
+            if(i==5) break;
+
+        }
+
+        //continue문 - 반복문이 continue문을 만나면 더이상 실행문을 수행하지 않고
+       // 증감식으로 돌아가서 실행문을 반복한다.
+       document.write("<br /><hr />9. continue문 <br />");
+       for (var i=1;i<=10;i++){
+            if(i%2==1) continue;
+            document.write(i + "<br />");
+       }
+
+
+
     //]]>
     </script>
 </head>

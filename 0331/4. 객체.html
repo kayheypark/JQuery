@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 객체 Object </title>
+    <script type="text/javascript">
+    
+    //<![CDATA[
+        /*
+            자바스크립트는 객체기반 언어다.
+            객체 - 특정 기능을 수행하는 단위체
+            메서드 - ㅐㄱ체가 지닌 각각의 기능
+
+            object.method();
+            휴대폰.통화하기(); - 메서드
+            휴대폰.색상; - 속성
+
+            새로운 객체를 생성할 때 - new  연산자 , new 내장객체함수명
+            var todayObj = new Date();
+            todayObj.getFullYear();
+        
+        
+        
+        */
+
+        /*
+        
+            Date 객체
+            var 변수 = new Date();
+            var 변수 = new Date(년,월,일,시,분,초);
+
+            날짜제공 메서드
+            getFullYear()
+            getMonth() 0~11
+            getDate() 
+            getDay() 요일 0 ~ 6xhdydlf
+            getHours() 0~23
+            getSeconds() 0~59
+            getMillisecond() 1/1000ch
+            getTime() 0~23 1970년 1월 1일 이후부터 경과된 밀리초 제공
+
+            날짜 지정메서드
+            setFullYear()
+            setMonth()
+            setDate() 
+            setDay() 
+            setHours() 
+            setSeconds()
+            setMillisecond()
+            setTime() 0
+
+            toGMTString() 날짜를 그리니치천문대 표준시로 표시
+            toString() 날짜를 문자형식으로 표시
+        
+        */ 
+
+        document.write("<h1>현재날짜/시간정보</h1>");
+        
+        var today = new Date();
+
+        var nowYear = today.getFullYear();
+        document.write("년도 : "+nowYear+"<br />");
+
+        var nowMonth= today.getMonth();
+        document.write("월 : "+nowMonth+"<br />");
+
+        var nowDate = today.getDate();
+        document.write("일 : "+nowDate+"<br />");
+
+        var nowDay = today.getDay();
+        
+        document.write("요일 : " + nowDay + "<br />");
+        switch (nowDay) {
+            case 0: nowDay = "일요일"
+                
+                break;
+            case 1: nowDay = "월요일"
+                
+                break;
+            case 2: nowDay = "화요일"
+                
+                break;
+            case 3: nowDay = "수요일"
+                
+                break;
+            case 4: nowDay = "목요일"
+                
+                break;
+            case 5: nowDay = "금요일"
+                
+                break;
+            case 6: nowDay = "토요일"
+                
+                break;
+                
+                default : document.write("해당 요일이 없습니다.");
+                break;
+        
+        }
+        document.write("오늘은 " + nowDay + "입니다.<br />");
+
+        var nowHours = today.getHours();
+        var nowMinutes = today.getMinutes();
+        var nowSeconds = today.getSeconds();
+
+        document.write("시 : " + nowHours + "<br />");
+        document.write("분 : " + nowMinutes + "<br />");
+        document.write("초 : " + nowSeconds + "<br />");
+
+        var nowTime = today.getTime();
+        document.write("경과시간 : " + nowTime + "<br />");
+
+        //set
+
+        today.setMonth(11); //12월
+        today.setDate(25); //25일
+
+        var nowMonth = today.getMonth()+1;
+        document.write("월 : " + nowMonth + "<br />");
+        var nowDate = today.getDate();
+        document.write("일 : " + nowDate + "<br />");
+
+        var nowDay = new Date(2020,3,2); //2020년 4월 2일
+        var afterDay = new Date(2020,5,26); //2020년 6월 26일
+
+        var diffDay = afterDay.getTime()-nowDay.getTime();
+
+        document.write("경과된 시간 : " + diffDay + "<br />");
+
+        var willDay = Math.ceil(diffDay / 1000 / 60 / 60 / 24); // 소수점 버리기
+        document.write("남은날짜 : " + willDay + "일" +"<br />");
+
+
+
+
+
+
+
+
+
+
+
+    //]]>
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
