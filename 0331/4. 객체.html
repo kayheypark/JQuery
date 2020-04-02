@@ -132,6 +132,110 @@
         document.write("남은날짜 : " + willDay + "일" +"<br />");
 
 
+        //일요일 img1-22.jpg ~ 토요일 img7-22.jpg
+        var today = new Date();
+        var nowDay =  today.getDay()+1; //1~7
+        document.write("<img src='images/img"+nowDay+"-22.jpg'>"+"<br />");
+
+        /*
+        
+            Math 객체 - new 연산자를 사용하지 않는다.
+            메서드
+            max(,,); 최대값
+            min(,,); 최소값
+            round(); 소수점 첫재자리 반올림
+
+            ceil(); 소수점 무조건 올림
+            floor(); 소수점 무조건 절삭
+            abs(); 절대값
+            random(); 0~1사이 난수 발생
+        
+        */
+
+        var maxNum =  Math.max(30,70,51);
+        document.write("최대값 : " + maxNum + "<br />");
+        
+        var minNum =  Math.min(8,10,15);
+        document.write("최소값 : " + minNum + "<br />");
+        
+        var roundNum =  Math.round(3.5);
+        document.write("반올림 : " + roundNum + "<br />");
+        
+
+        var ceilNum =  Math.ceil(5.1);
+        document.write("무조건올림 : " + ceilNum + "<br />");
+        
+        var floorNum =  Math.floor(10.9);
+        document.write("무조건절삭 : " + floorNum + "<br />");
+        
+        var absNum =  Math.abs(-10);
+        document.write("절대값 : " + absNum + "<br />");
+        
+        var randomNum =  Math.random();
+        document.write("0~1난수 : " + Math.floor(randomNum*3+1) + "<br />");
+
+        //img1-21.jpg ~ im3-24.jpg 랜덤이미지 출력
+        //Math.random()*(갯수)+시작수
+        //0.00001*3 + 1 = 1.00003
+        //0.99999*3 + 1 = 3.99997
+
+        var imgNum = Math.floor(Math.random()*3+1);
+        document.write("<img src='images/img"+imgNum+"-24.jpg' alt='랜덤이미지' />"+"<br />");
+
+        //1~45 , 6개
+        for(var i = 1;i<=6;i++){
+
+
+            var num = Math.floor(Math.random()*45+1);
+            document.write("번호 : "+num+"<br />");
+            
+        }
+
+        /*
+         String 객체 - 문자형 변수도 String 객체다.
+         var 변수(인스턴트 네임) = new String("자바스크립트");\
+         var 변수 = "자바스크립트";
+
+         메서드
+         .bold()
+         .link("URL")
+         .length - 텍스트 개수 반환
+         .toLowerCase()
+         .toUpperCase()
+         .indexOf("i") - i를 찾아서 최초로 일치하는 인덱스번호 반환, 없으면 -1 반환
+         .lastIndexOf("") - 뒤에서부터 상동
+         .charAt(5) - 5번 인덱스에 저장된 문자 데이터를 반환
+         .substring(4,6) - 인덱스 4~6직전 문자 반환
+         .substr(0,3) - 0번 인덱스부터 3글자 반환
+         .replace("web","bye") - 텍스트 교체
+         .slice(7,9) - 인덱스 7~9직전 문자 반환 
+         .concat("good") - 끝에 good단어를 결합해서 반환
+         .split("") - 공백을 기준으로 데이터 분리(콤마)
+
+        
+        */
+
+        var theText = "web js hi css";
+        document.write(theText+"<br />");
+        document.write(theText.bold()+"<br />");
+        document.write(theText.link("http://www.naver.com/")+"<br />");
+        document.write(theText.length+"<br />");
+        document.write(theText.toLowerCase()+"<br />");
+        document.write(theText.toUpperCase()+"<br />");
+        document.write(theText.indexOf("i")+"<br />");
+        document.write(theText.lastIndexOf("")+"<br />");
+        document.write(theText.charAt(5)+"<br />");
+        document.write(theText.substring(4,6)+"<br />");
+        document.write(theText.substr(0,3)+"<br />");
+        document.write(theText.replace("web","bye")+"<br />");
+        document.write(theText.slice(7,9)+"<br />");
+        document.write(theText.concat(" good")+"<br />");
+        document.write(theText.split(" ")+"<br />");
+
+        //주민번호입력받고 뒷자리 가리기
+        var birth = prompt("주민등록번호를 입력해보세요","9510301234567").slice(0,6);
+        document.write("주민번호 : " + birth + "-*******");
+
 
 
 
