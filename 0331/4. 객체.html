@@ -236,14 +236,48 @@
         var birth = prompt("주민등록번호를 입력해보세요","9510301234567").slice(0,6);
         document.write("주민번호 : " + birth + "-*******");
 
+        document.write("<h3>문자치환</h3>");
+        var theText1="img2.out.jpg";
+        theText1=theText1.replace("out.jpg","over.jpg");
+        document.write(theText1+"<br />");
 
+        document.write("<h3>문자추출</h3>");
+        var theText2="images/img10.jpg";
+        theText2=theText2.split("/")[1]; //img10.jpg 
+        theText2=theText2.substring(3); //10.jpg 인덱스 3직전의 문자열 반환
+        theText2=parseInt(theText2); //10
+        document.write(theText2+"<br />");
 
+        document.write("<h3>마지막 문자 추출</h3>");
+        var theText3 = "hello javascript";
+        var lastIndex = theText3.length-1 //15
+        theText3=theText3.charAt(lastIndex)
+        document.write(theText3+"<br />");
 
+        //
 
+        var idNum = prompt("당신의 주민번호는?","9510301111111");
+        document.write(idNum.substring(0,6) + "-*******" + "<br />");
 
+        var email = prompt("당신의 이메일은?","abc@abc.com");
+        if (email.indexOf("@")<0 || email.indexOf("."<0)) {
+            alert("다시 입력!");
+            
+        }else{
+                document.write("당신의 이메일 주소는" + email + "입니다. <br />");
+        }
 
+        //
 
+        var id = prompt("아이디를 입력해주세요","akskdl13");
 
+        if (id.charAt(0)==" ") { // indexOf(" ")==0으로도 가능
+            alert("첫글자를 공백으로 둘 수 없습니다.");
+        } else if(id.length==0){
+            alert("아이디를 입력하지 않았습니다.");
+        } else {
+            document.write("당신의 아이디 : " + id);
+        }
 
     //]]>
 
