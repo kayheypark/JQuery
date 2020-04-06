@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    *{margin: 0; padding: 0;}
+    img{vertical-align: top; border:0}
+    ul{list-style: none;}
+
+    div#bannerWrap{width: 420px;height: 68px;position: relative;}
+
+    div.frame{width: 400px;overflow: hidden;}
+
+    ul#bannerList{width: 2800px; position: relative; left: 0;}
+    ul#bannerList::after{content: ""; display: block;clear: both;}
+    ul#bannerList li {float: left; width: 100px;}
+
+    .leftBtn {position: absolute; right: 5px; top: 10px;}
+    .rightBtn {position: absolute; right: 5px; top: 40px;}
+
+    </style>
+
+
+    <script type="text/javascript">
+    //<![CDATA[
+
+        var Num = 0;
+        var colWidth = -400;
+
+        function myBanner(whichBtn){
+            var myBannerList = document.getElementById("bannerList"); // ul
+
+            if(whichBtn == 'leftBtn'){
+                //prev
+                Num--;
+                if(Num<0) Num=6;
+                myBannerList.style.left=(Num*colWidth) + "px";
+                return false;
+            } else if(whichBtn == 'rightBtn'){
+                //next
+                Num++;
+                if(Num>6) Num=0;
+                myBannerList.style.left=(Num*colWidth) + "px";
+                return false;
+            }
+            
+
+        }
+    //]]>
+
+    </script>
+</head>
+<body>
+    <div id="bannerWrap">
+        <div class="frame">
+            <ul id="bannerList">
+                <li><img src="images/s_img1-33.jpg" alt="배너1"></li>
+                <li><img src="images/s_img1-33.jpg" alt="배너1"></li>
+                <li><img src="images/s_img1-33.jpg" alt="배너1"></li>
+                <li><img src="images/s_img1-33.jpg" alt="배너1"></li>
+
+                <li><img src="images/s_img2-33.jpg" alt="배너2"></li>
+                <li><img src="images/s_img2-33.jpg" alt="배너2"></li>
+                <li><img src="images/s_img2-33.jpg" alt="배너2"></li>
+                <li><img src="images/s_img2-33.jpg" alt="배너2"></li>
+                
+                <li><img src="images/s_img3-33.jpg" alt="배너3"></li>
+                <li><img src="images/s_img3-33.jpg" alt="배너3"></li>
+                <li><img src="images/s_img3-33.jpg" alt="배너3"></li>
+                <li><img src="images/s_img3-33.jpg" alt="배너3"></li>
+
+                <li><img src="images/s_img4-33.jpg" alt="배너4"></li>
+                <li><img src="images/s_img4-33.jpg" alt="배너4"></li>
+                <li><img src="images/s_img4-33.jpg" alt="배너4"></li>
+                <li><img src="images/s_img4-33.jpg" alt="배너4"></li>
+
+                <li><img src="images/s_img5-33.jpg" alt="배너5"></li>
+                <li><img src="images/s_img5-33.jpg" alt="배너5"></li>
+                <li><img src="images/s_img5-33.jpg" alt="배너5"></li>
+                <li><img src="images/s_img5-33.jpg" alt="배너5"></li>
+
+                <li><img src="images/s_img6-33.jpg" alt="배너6"></li>
+                <li><img src="images/s_img6-33.jpg" alt="배너6"></li>
+                <li><img src="images/s_img6-33.jpg" alt="배너6"></li>
+                <li><img src="images/s_img6-33.jpg" alt="배너6"></li>
+
+                <li><img src="images/s_img7-33.jpg" alt="배너7"></li>
+                <li><img src="images/s_img7-33.jpg" alt="배너7"></li>
+                <li><img src="images/s_img7-33.jpg" alt="배너7"></li>
+                <li><img src="images/s_img7-33.jpg" alt="배너7"></li>
+
+            </ul>
+            <a href="#" class="leftBtn" onclick="myBanner('leftBtn');"><img src="images/left_arrow-33.png" alt="이전 왼쪽버튼" /></a>
+            <a href="#" class="rightBtn" onclick="myBanner('rightBtn');"><img src="images/right_arrow-33.png" alt="다음 오른쪽버튼" /></a>
+        </div>
+    </div>
+</body>
+</html>

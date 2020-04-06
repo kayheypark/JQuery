@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        //<![CDATA[
+        //2. 당신은 자바스크립트를 너무 좋아하십니까?
+        // 네: "멋집니다요!" , "지금처럼 열심히~" , "Good입니다" 중
+        // 아니오 : "그만놀아요ㅠㅠ","분발하세요>.<","재미없어욬ㅋ" 중
+
+        function iLoveJs(answer) {
+            if (answer == "yes") {
+                var yyy = ["멋집니다요", "지금처럼 열심히", "Good입니다"];
+                var num = Math.floor(Math.random() * 3 + 0);
+                alert("와와!" + yyy[num]);
+            }
+         else {
+            var nnn = ["안멋집니다요", "지금처럼 말고", " bad입니다"];
+            var num = Math.floor(Math.random() * 3 + 0);
+            alert("으이구!" + nnn[num]);
+        }
+        return false;
+        }
+
+
+        /* function iLoveJs(answer) {
+             var Num = 0;
+
+             if (answer == 'yes') {
+                 Num = Math.floor(Math.random() * 3 + 0);
+
+                 if (Num == 0) {
+                     alert('멋집니다요');
+                 } else if (Num == 1) {
+                     alert('지금처럼 열심히~');
+                 } else if (Num == 2) {
+                     alert('Good입니다');
+                 }
+                 return answer;
+             } else if (answer == 'no') {
+                 Num = Math.floor(Math.random() * 3 + 0);
+
+                 if (Num == 0) {
+                     alert('그만놀아요ㅠㅠ');
+                 } else if (Num == 1) {
+                     alert('분발하세요>.<');
+                 } else if (Num == 2) {
+                     alert('재미없어욬ㅋ');
+                 }
+                 return answer;
+             }
+
+         }
+         */
+
+
+        //]]>
+    </script>
+</head>
+
+<body>
+    <h1>당신은 자바스크립트를 너무 좋아하십니까?</h1>
+    <button onclick="iLoveJs('yes')">...네...</button>
+    <button onclick="iLoveJs('no')">.아니오.</button>
+</body>
+
+</html>
