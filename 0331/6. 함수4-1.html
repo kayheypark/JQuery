@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 4 : 백화점 세일기간입니다.</title>
+    <script type="text/javascript">
+    //<![CDATA[
+window.onload = function(){
+
+
+        function salePrice(){
+            var theOrg = document.getElementById("oPrice").value;
+            var thePrice = parseInt(theOrg) * 0.7;
+            //alert(thePrice);
+
+            var myArea = document.getElementById("Area"); //div
+            myArea.innerHTML = thePrice + "원 입니다."
+            return false;
+        }
+
+        var form = document.getElementById("Price"); // form
+        form.onsubmit=function(){return salePrice();}
+    //    form.onsubmit=salePrice(); 하면 무조건실행
+    //    form.onsubmit=salePrice; 하면 조건부실행
+
+
+}
+    //]]>
+    
+    </script>
+</head>
+<body>
+    <h1>백화점 세일 기간입니다.</h1>
+    <p>모든 상품에 대해 30% 세일을 하고 있습니다.</p>
+    <form action="/" id="Price">
+    <label for="oPrice">정상가</label>
+    <input type="text" name="price" id="oPrice" />
+    <button>세일가</button>
+    </form>
+
+    <div id="Area"></div>
+</body>
+</html>

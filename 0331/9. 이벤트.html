@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script type="text/javascript">
+    //<![CDATA[
+       /*
+        이벤트 event
+
+        onload 문서를 모두 불러오고나서 발생
+        onunload 문서 종료할 때 발생
+        ondbclick 더블클릭
+        onclick 클릭
+        onkeypress 키보드 눌렀을 때
+        onkeydown 키보드 눌렀을 때
+        onkeyup 키보드 누르고 뗏을 때
+        onmouseover 대상에 마우스를 올렸을 때
+        onfocus 포커스
+        onblur 포커스 잃을때
+        onmouseout 마우스가 벗어났을때
+        onsubmit 폼에서 submit 확인 버튼 눌렀을 때
+        onreset 폼에서 reset 취소 버튼 눌렀을 때
+        onchange 입력요소의 값이 바뀌고 포커스가 옮겨졌을 때 발생
+        onmousemove 마우스 움직일 때
+        onresize 브라우저 창을 조절할때마다 발생
+        onerror 문서나 이미지를 불러올때 에러가 나면 발생
+        onabort 문서를 불러오다가 중단되면 발생
+       
+       */
+
+function theFnc(){
+    alert("자바스크립트");
+}
+
+ window.onload = function(){
+
+
+
+     var myBtn = document.getElementById("btn1"); // button
+     myBtn.onclick = theFnc;
+ }
+
+    //]]>
+    
+    </script>
+</head>
+<body>
+    <button id="btn1">버튼</button>
+</body>
+</html>

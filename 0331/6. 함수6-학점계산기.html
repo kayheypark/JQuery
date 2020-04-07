@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포스기</title>
+    <script type="text/javascript">
+    //<![CDATA[
+        //2.학생이름, 학번, 국어, 영어, 수학점수 입력받고
+        //합계, 평균, 학점 구하는 것은 함수 3개만들어서
+        //학점도 평균이 90점 이상이라면 A, 80이상 B, 60 미만 F 
+        //학생이름, 학번, 국어점수, 영어점수, 합계, 평균, 학점 출력.
+    window.onload = function(){
+
+        var Name = prompt("이름을 입력하세요","박경호");
+        var Code = prompt("학번을 입력하세요","201422260");
+        var K = Number(prompt("국어점수를 입력하세요","90"));
+        var E = Number(prompt("영어점수를 입력하세요","95"));
+        var M = Number(prompt("수학점수를 입력하세요","95"));
+        var SumResult;
+        var AvgResult;
+        var RankResult;
+
+        function Sum(a,b,c) { //합계
+             SumResult = a+b+c;
+            return SumResult;
+        }
+        function Avg(d) { //평균
+             AvgResult = d/3;
+            return AvgResult.toFixed(2);
+        }
+        function Rank(f) { // 학점계산
+            if(f>=90){
+                RankResult = "A학점";
+            } else if(f>=80){
+                RankResult = "B학점";
+            } else if(f>=70){
+                RankResult = "C학점";
+            } else if(f>=60){
+                RankResult = "D학점";
+            } else if (f<60){
+                RankResult = "F학점";
+            }
+
+            return RankResult;
+        }
+
+        var result = document.getElementById("Area"); //div
+        
+        result.innerHTML =
+                             "1. 이름 :" + Name + "<br />" +
+                             "2. 학번 :" + Code + "<br />" +
+                             "3. 국어점수 :" + K + "<br />" +
+                             "4. 영어점수 :" + E +  "<br />" +
+                             "5. 수학점수 :" + M +  "<br />" +
+                             "6. 합계 :" + Sum(K,E,M) +  "<br />" +
+                             "7. 평균 :" + Avg(SumResult) +  "<br />" +
+                             "8. 학점 :" + Rank(AvgResult) +  "<br />"; //입력
+    }
+    //]]>
+    
+    </script>
+</head>
+<body>
+    <div id="Area"></div>
+</body>
+</html>

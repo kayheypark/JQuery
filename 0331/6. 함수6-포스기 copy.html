@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포스기</title>
+    <script type="text/javascript">
+    //<![CDATA[
+    window.onload = function(){
+        function kumaek(q,c) {
+            var kum = q*c;
+            return kum;
+        }
+
+        var su = prompt("수량","20");
+        var dan = prompt("단가","1500");
+
+        var result = document.getElementById("Area"); //div
+
+        result.innerHTML = "수량 : " + su +"<br />단가 : " + dan + "<br />금액 : " + kumaek(su,dan) + "원";
+    
+
+        
+    }
+    //]]>
+    
+    </script>
+</head>
+<body>
+    <div id="Area"></div>
+</body>
+</html>

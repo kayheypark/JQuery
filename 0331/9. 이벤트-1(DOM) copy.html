@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트-1</title>
+    <script type="text/javascript">
+    //<![CDATA[
+       /*
+        이벤트 event
+
+       DOM (Document Object Model, 문서 객체 구조)
+
+       Dom Level 0 -
+       객체 하나와 이벤트 하나를 연결해서 작동,
+       한 객체에 동시에 같은 이벤트를 두번이상 적용 안됨, 마지막에 적용된 이벤트만 실행
+       
+       */
+
+function theFnc(){
+    alert("자바스크립트");
+}
+
+ window.onload = function(){
+     var myBtn1 = document.getElementById("btn1"); // button1
+     myBtn1.onclick = theFnc;
+    }
+
+ window.onload = function(){
+     var myBtn2 = document.getElementById("btn2"); // button2
+     myBtn2.onclick = theFnc;
+    }
+
+    //]]>
+    
+    </script>
+</head>
+<body>
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장함수</title>
+    <script type="text/javascript">
+    //<![CDATA[
+       /*
+       eval() - 문자열을 자바스크립트 문장으로 변환( 수식은 계산, 문자는 변수로)
+       parseInt() - 숫자를 정수로 반환
+       parseFloat() - 숫자를 실수로 반환
+       isNaN() - Not a Number의 약자로 숫자가 아닌 문자가 포함되면 true를 반환
+       isFinite() - 주어진 값이 유리수인지 아닌지 판단
+       Number() - 문자를 숫자형으로 반환
+       String() - 숫자를 문자형으로
+       esape() - 문자를 16진수 아스키코드 값으로
+       unescape() - escape로 변환된 값을 다시 되돌려 반환
+       
+       
+       */
+    var result1 = eval("10+20");
+    document.write(result1 + "<br />"); // 30
+
+    var num = 100;
+    document.write("num"+10+"<br />"); //num10
+    document.write(eval("num")+10+"<br />"); //110
+
+    var result2 = isNaN("02-235-1620");
+    document.write(result2+"<br />"); //true
+
+
+    //]]>
+    
+    </script>
+</head>
+<body>
+</body>
+</html>

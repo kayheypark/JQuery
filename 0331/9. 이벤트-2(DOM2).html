@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트-1</title>
+    <script type="text/javascript">
+    //<![CDATA[
+       /*
+        이벤트 event
+
+       DOM (Document Object Model, 문서 객체 구조)
+
+       Dom Level 2 - 한 객체에 같은 이벤트를 두번 적용할 수 없는 Dom Level 0 의 문제 해결.
+       - 표준방식 브라우저
+       - 비표준방식 브라우저(IE8 이하)
+
+       if(window.addEventlistener){ // 표준방식 브라우저일 경우
+        표준 이벤트 등록 메서드;
+       } else if(window.attachEvent){ // 비표준방식 브라우저(ie8 이하)일 경우
+        비표준 이벤트 등록 메서드
+       }
+
+       */
+
+
+function theFnc(){
+    alert("자바스크립트");
+}
+
+ function clickBtn1(){
+     var myBtn1 = document.getElementById("btn1"); // button1
+     myBtn1.onclick = function(){theFnc();}
+    }
+
+ function clickBtn2(){
+     var myBtn2 = document.getElementById("btn2"); // button2
+     myBtn2.onclick = function(){theFnc();}
+    }
+
+
+//표준, 비표준 모두가능 코드
+if(window.addEventListener){
+    window.addEventListener("load",clickBtn1,false);
+    window.addEventListener("load",clickBtn2,false);
+    //이벤트대상객체,addEventListener("이벤트명",함수명,false)
+}
+else if(window.attachEvent){
+    window.attachEvent("onload",clickBtn1);
+    window.attachEvent("onload",clickBtn2);
+    //이벤트대상객체,attachEvent("on이벤트명",함수명,false)
+}
+
+    //]]>
+    
+    </script>
+</head>
+<body>
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+</body>
+</html>

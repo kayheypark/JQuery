@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        //<![CDATA[
+        //2. 당신은 자바스크립트를 너무 좋아하십니까?
+        // 네: "멋집니다요!" , "지금처럼 열심히~" , "Good입니다" 중
+        // 아니오 : "그만놀아요ㅠㅠ","분발하세요>.<","재미없어욬ㅋ" 중
+window.onload = function(){
+
+
+    function iLoveJs(answer) {
+        if (answer == "yes") {
+            var yyy = ["멋집니다요", "지금처럼 열심히", "Good입니다"];
+            var num = Math.floor(Math.random() * 3 + 0);
+            alert("와와!" + yyy[num]);
+        }
+        else if(answer=='no') {
+        var nnn = ["안멋집니다요", "지금처럼 말고", " bad입니다"];
+        var num = Math.floor(Math.random() * 3 + 0);
+        alert("으이구!" + nnn[num]);
+    }
+    return false;
+    }
+    
+var y = document.getElementById("btnYes"); // 첫번재 버튼
+y.onclick = function(){iLoveJs('yes');}
+
+var n = document.getElementById("btnNo"); // 두번재 버튼
+n.onclick = function(){iLoveJs('no');}
+}
+        //]]>
+    </script>
+</head>
+
+<body>
+    <h1>당신은 자바스크립트를 너무 좋아하십니까?</h1>
+    <button id="btnYes">...네...</button>
+    <button id="btnNo">.아니오.</button>
+</body>
+
+</html>
