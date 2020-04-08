@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저객체</title>
+    <script type="text/javascript">
+//<![CDATA[
+
+/*
+DOM (Document Object Model) - 문서객체모델
+도식화
+최상위노드 node - html
+요소 - 노드 node
+노드 Node - 요소(Element) 노드1, 속성노드 2, 텍스트노드
+ (공백문자포함) 3
+
+ 선택자 - 
+ 원거리 선택자 -
+ id선택자 - 선택대상.getElementById("아이디명");
+ 요소명 선택자 - 선택대상.getElementByTagName("태그면"); // 배열로 저장
+
+ 근거리 선택자 - 특정 요소를 기준으로 상대적인 다른 요소를 선택할 때
+
+ parentNode - 선택한 요소 기준으로 부모 요소 선택
+*/
+
+window.onload = function(){
+    var parentN = document.getElementById("list").parentNode; // div
+    console.log(parentN);
+
+//$('#list').parent()
+
+var childN = document.getElementById("list").childNodes;
+console.log(childN);
+
+
+
+// childNodes - 선택한 요소 기준으로 자식 요소 선택
+//document.getElementById("list").childNodes // li 6개
+//표준방식 브라우저 - 공백문자 포함 13개 자식, 비표준방식ie8이하 브라우저 - 공백불표함 6개
+//엔터를 공백문자 인식
+
+var childrenN = document.getElementById("list").children; //6
+console.log(childrenN);
+//children - 선택한 요소 기준으로 자식 요소 선택
+//$("#list").children()
+
+var firstChildN = document.getElementById("list").firstChild; // 표준방식, 비표준방식브라우저 영향받음
+console.log(firstChildN);
+
+var childrenF = document.getElementById("list").children[0]; // 호환됨
+console.log(childrenF);
+
+var lastChildN = document.getElementById("list").lastChild; // 표준방식, 비표준방식 브라우저
+console.log("lastChildN");
+
+var lastNum = document.getElementById("list").children.length - 1; // 1 2 3 4 5            0 1 2 3 4 5
+var childrenL = document.getElementById("list").children[lastNum];
+console.log(childrenL);
+
+var prev = document.getElementById("title").previousSibling; // 공백문자
+    while(prev.nodeType == 3){ //
+        prev = prev.previousSibling; //h1
+    }
+    console.log(prev);
+
+    var next = document.getElementById("title2").nextSibling; //
+    while(next.nodeType == 3){ //3
+        next = next.nextSibling; // ul
+    }
+    console.log(next);
+
+
+
+
+
+
+}
+//]]>
+    
+    </script>
+</head>
+<body>
+<div>
+    <h1>선택자</h1>
+    <h2 id="title">원거리 선택자</h2>
+    <ul>
+        <li>getElementById</li>
+        <li>getElementByTagName</li>
+    </ul>
+    <h2 id="title2">근거리 선택자</h2>
+    <ul id="list">
+        <li>parentNode</li>
+        <li>childNodes</li>
+        <li>children</li>
+        <li>firstChild</li>
+        <li>previousSibling</li>
+        <li>nextSibling</li>
+    </ul>
+</div>
+</body>
+</html>
