@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세로메뉴</title>
+    <style type="text/css">
+    body, p, h1, h2, h3, h4, h5, h6, ul, li, ol {margin: 0;padding: 0;}
+    li{list-style: none;}
+    body {font-size: 12px; font-family: "굴림", Gulim, sans-serif; margin: 50px;}
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+$(function(){
+    $("#gnb>li>ul").css("display", "none");
+
+    $("#gnb>li>a").mouseover(function(){
+        $("#gnb>li>ul").css("display","none"); 
+        $(this).next().css("display","block");
+
+        //$("선택자").attr("속성","값");
+        //$("#gnb>li>a>img").attr("src", $("#gnb>li>a>img").attr("src").replace("_over.gif",".gif"));
+        $("#gnb>li>a>img").each(function(){
+        $(this).children().attr("src", $("#gnb>li>a>img").attr("src").replace(".gif","_over.gif"));
+
+        });
+        
+    });
+})
+
+
+    //]]>
+    </script>
+</head>
+<body>
+    <ul id="gnb">
+        <li class="menu1">
+            <a href="#">
+                <img src="images/gnb01.gif" alt="협의회소개" />
+            </a>
+            <ul>
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">사업안내</a></li>
+                <li><a href="#">조직현황</a></li>
+            </ul>
+        </li>
+        <li class="menu2">
+            <a href="#">
+                <img src="images/gnb02.gif" alt="협의회소식" />
+            </a>
+            <ul>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">복지뉴스</a></li>
+                <li><a href="#">복지정보</a></li>
+                <li><a href="#">교육안내</a></li>
+            </ul>
+        </li>
+        <li class="menu3">
+            <a href="#">
+                <img src="images/gnb03.gif" alt="자료실" />
+            </a>
+            <ul>
+                <li><a href="#">일반자료실</a></li>
+                <li><a href="#">협의회자료</a></li>
+            </ul>
+        </li>
+        <li class="menu4">
+            <a href="#">
+                <img src="images/gnb04.gif" alt="게시판" />
+            </a>
+            <ul>
+                <li><a href="#">자유게시판</a></li>
+                <li><a href="#">현장의소리 Q&A</a></li>
+            </ul>
+        </li>
+    
+    </ul>
+</body>
+</html>

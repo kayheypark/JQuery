@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>전체메뉴</title>
+        <style type="text/css">
+    * {margin: 0; padding: 0;}
+    img, fieldset {border: 0;}
+    ul, ol {list-style-type: none;}
+    div.menu {display: none; background: url(img/bg_menu.gif) no-repeat; width: 687px; height: 283px; padding-top: 15px;}
+    li {float: left; padding: 10px 35px;}
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+// window.onload = function (){
+//     var allMenuBtn = document.getElementById("button"); // a
+//     var flag = true;
+
+//     allMenuBtn.onclick=function(){
+//         var theMenu = document.getElementById("menu") // div
+//         var btnImg = document.getElementById("menuBtn"); // 버튼img
+//         if(flag){//열리는게
+//         theMenu.style.display="block";
+//         btnImg.src=btnImg.src.replace("_open.jpg","_close.jpg");
+//         flag=0;
+//         } else {
+//             theMenu.style.display="none";
+//             btnImg.src=btnImg.src.replace("_close.jpg","_open.jpg");
+//             flag=1;
+//         }
+//     }
+// } //온로드 닫기
+
+//제이쿼리에선?
+
+
+//} //doc ready
+//]]>
+</script>
+<script type="text/javascript">
+$(function(){
+    var flag=true;
+    $("a#button").click(function(){
+        if(flag){
+            $("div#menu").css("display","block");
+            $("img#menuBtn").attr("src",$("img#menuBtn").attr("src").replace("_open.jpg","_close.jpg"));
+            flag=0;
+        } else {
+            $("div#menu").css("display","none");
+            $("img#menuBtn").attr("src",$("img#menuBtn").attr("src").replace("_close.jpg","_open.jpg"));
+            flag=1;
+        }
+        
+    })
+})
+</script>
+</head>
+<body>
+    <a href="#" id="button"><img src="img/btn_menu_open.jpg" alt="전체메뉴 보이기/숨기기" id="menuBtn" /></a>
+    <div id="menu" class="menu">
+        <ul>
+            <li><img src="img/menu_1_on.gif" alt="공사소개" /></li>
+            <li><img src="img/menu_2_on.gif" alt="주요사업" /></li>
+            <li><img src="img/menu_3_on.gif" alt="홍보센터" /></li>
+            <li><img src="img/menu_4_on.gif" alt="교객서비스" /></li>
+            <li><img src="img/menu_5_on.gif" alt="경영공시" /></li>
+        </ul>
+    </div>
+</body>
+</html>

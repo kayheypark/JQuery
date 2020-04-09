@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 문서객체조작 </title>
+    <script type="text/javascript">
+//<![CDATA[
+   /*
+   문서객체조작 - 새로운 요소를 생성, 추가, 삭제, 복제
+   메서드
+    생성 - createElement("요소명")
+            appendTextNode("텍스트") / createTextNode("텍스트")
+    추가 - 선택요소.appendChild(새요소) - 선택요소에 새로운 자식 요소를 추가
+            부모요소.insertBefore(새요소, 자식요소) - 자식요소 앞에 새로운 자식요소 추가
+    교체 - 부모요소.replaceChild(새요소,자식요소) - 자식요소를 새요소로 덮어쓰기
+    삭제 - 부모요소.removeChild(자식요소) - 자식요소 삭제
+    복제 - 선택요소.cloneNode(true or false)
+         - 선택요소를 복제해서 true일 경우 하위요소까지 모두 복제
+    속성부여 - 선택요소.serAttribute("속성","값") - 선택요소에 해당 속성값 부여
+   */
+  window.onload = function(){
+    var newPtag = document.createElement("p");
+    var newButton1 = document.createElement("button");
+    var newButton2 = document.createElement("button");
+
+    var text1 = document.createTextNode("버튼1");
+    var text2 = document.createTextNode("버튼2");
+
+    newButton1.setAttribute("id","btn1");
+    newButton2.setAttribute("id","btn2");
+
+    newButton1.appendChild(text1);
+    newButton2.appendChild(text2);
+
+    newPtag.appendChild(newButton1);
+    newPtag.appendChild(newButton2);
+
+    var theObj = document.getElementById("theBox"); // div
+    theObj.appendChild(newPtag);
+
+
+
+  }//window.onload=function 닫기
+    //]]>
+    </script>
+</head>
+<body>
+    <div id="theBox">
+        <h1>요소 생성 연습</h1>
+        <!-- 
+        <p>
+            <button id="btn1">버튼1</button>
+            <button id="btn2">버튼2</button>
+        </p>
+     -->
+    </div>
+</body>
+</html>

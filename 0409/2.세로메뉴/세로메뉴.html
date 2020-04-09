@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세로메뉴</title>
+    <style type="text/css">
+    body, p, h1, h2, h3, h4, h5, h6, ul, li, ol {margin: 0;padding: 0;}
+    li{list-style: none;}
+    body {font-size: 12px; font-family: "굴림", Gulim, sans-serif; margin: 50px;}
+    </style>
+    <script type="text/javascript">
+    //<![CDATA[
+window.onload = function(){
+    var gnb = document.getElementById("gnb"); // ul
+    var menuList = gnb.children; //li 4개
+    var subMenu = gnb.getElementsByTagName("ul"); // 하위 ul 4개 [] [] [] []
+
+    for(var i=0;i<subMenu.length;i++){
+        subMenu[i].style.display="none";
+    }
+
+    for(var i=0;i<menuList.length;i++){ // li 4개
+    menuList[i].children[0].onmouseover=function(){ //a
+       
+        // 기존 하위 ul 모두 안보이게 해라
+        for(var i=0;i<subMenu.length;i++){ 
+        subMenu[i].style.display="none";
+        }
+
+       //하위 ul 보여라
+       var nextNode = this.nextSibling;
+       while(nextNode.nodeType == 3){
+        nextNode = nextNode.nextSibling; // ul
+       }
+       nextNode.style.display = "block";
+       
+       // 기존 img 원래대로 해라
+       for(var k=0;k<menuList.length;k++){ //li
+       var myImg = menuList[k].children[0].children[0] // img
+       myImg.src=myImg.src.replace("_over.gif",".gif");
+        }
+
+       //a의 img 바뀌어라
+       this.children[0].src=this.children[0].src.replace(".gif","_over.gif");
+    }
+
+    }
+
+
+}//윈온로드 닫기
+
+    //]]>
+    </script>
+</head>
+<body>
+    <ul id="gnb">
+        <li class="menu1">
+            <a href="#">
+                <img src="images/gnb01.gif" alt="협의회소개" />
+            </a>
+            <ul>
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">사업안내</a></li>
+                <li><a href="#">조직현황</a></li>
+            </ul>
+        </li>
+        <li class="menu2">
+            <a href="#">
+                <img src="images/gnb02.gif" alt="협의회소식" />
+            </a>
+            <ul>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">복지뉴스</a></li>
+                <li><a href="#">복지정보</a></li>
+                <li><a href="#">교육안내</a></li>
+            </ul>
+        </li>
+        <li class="menu3">
+            <a href="#">
+                <img src="images/gnb03.gif" alt="자료실" />
+            </a>
+            <ul>
+                <li><a href="#">일반자료실</a></li>
+                <li><a href="#">협의회자료</a></li>
+            </ul>
+        </li>
+        <li class="menu4">
+            <a href="#">
+                <img src="images/gnb04.gif" alt="게시판" />
+            </a>
+            <ul>
+                <li><a href="#">자유게시판</a></li>
+                <li><a href="#">현장의소리 Q&A</a></li>
+            </ul>
+        </li>
+    
+    </ul>
+</body>
+</html>

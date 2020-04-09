@@ -69,14 +69,47 @@ var prev = document.getElementById("title").previousSibling; // 공백문자
     while(next.nodeType == 3){ //3
         next = next.nextSibling; // ul
     }
-    console.log(next);
+    console.log(next); //1
+    //$("#title2").next()
 
 
+var myObj = document.getElementById("title") //h2
+myObj.style.color = "#f00";
+//$("#title").css("color","#f00");
 
+var myList = document.getElementsByTagName("ul"); // ul , ul
+var myObj2 = myList[0].getElementsByTagName("li")[1]; // 두번째 li
+myObj2.style.border = "solid 1px #f00";
 
-
+//id가 list인 ul에서 li를 찾고 그중에서 인덱스 3번째 li에 글씨 색을 파란색으로 해라
+var listZone = document.getElementById("list"); // ul
+var listObj = listZone.getElementsByTagName("li")[3];
+listObj.style.color = "blue";
 
 }
+
+    function loadFnc(){
+        var prev = document.getElementById("title").previousSibling; // 공백문자
+        while(prev.nodeType == 3){ //3
+            prev = prev.previousSibling;} //h1
+            alert("prev : " + prev.nodeType); // 1(속성?)
+    }
+    
+    function loadFnc2(){
+        var next = document.getElementById("title").nextSibling; // 
+        while(next.nodeType == 3){ //3
+            next = next.nextSibling;} //ul
+            document.write("next : " + next.nodeType); // 1
+    }
+    
+    if(window.addEventListener){
+        window.addEventListener("load",loadFnc,false);
+        window.addEventListener("load",loadFnc2,false);
+    } else if (window.attachEvent){
+        window.attachEvent("onload",loadFnc);
+        window.attachEvent("onload",loadFnc2);
+    
+    }
 //]]>
     
     </script>
