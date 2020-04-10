@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로메뉴</title>
+    <style type="text/css">
+    /*common*/
+    body, p ,h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, caption, form, fieldset, legend, input
+    {margin: 0;padding: 0;}
+    body {font-size: 12px;  font-family: Dotum;}
+    img, fieldset {border:0;}
+    li{list-style: none;}
+    
+
+    /*gnb*/
+    ul.gnb {position: relative; margin-left: 100px; margin-top: 100px;}
+    ul.gnb>li {float: left;}
+    ul.gnb>li>ul {position: absolute; top: 45px;}
+    ul.gnb>li:nth-child(2)>ul {left: 120px;}
+    ul.gnb>li:nth-child(3)>ul {left: 215px;}
+    ul.gnb>li:nth-child(4)>ul {left: 320px;}
+    ul.gnb>li:nth-child(5)>ul {left: 440px;}
+    ul.gnb>li:nth-child(6)>ul {left: 525px;}
+    ul.gnb>li>ul>li {float: left; margin-right: 25px;}
+    ul.gnb>li>ul>li:last-child {margin-right: 0;}
+
+    </style>
+    <script type="text/javascript">
+    window.onload=function(){
+var gnb = document.getElementById("gnb"); // ul.gnb 불러오기
+var menuList = gnb.children; //li li li li li li 6개
+var subMenu = gnb.getElementsByTagName("ul"); // 하위 ul 4개
+
+for(var i=0;i<subMenu.length;i++){
+    subMenu[i].style.display="none";
+}
+
+for(var i=0;i<menuList.length;i++){
+    menuList[i].children[0].onmouseover=function(){ //a
+        //기존 하위 ul 안보이게하기
+        //ul 보이기
+        var nextNode = this.nextSibling;
+        while(nextNode.nodeType==3){
+            nextNode=nextNode.nextSibling;
+        }
+        nextNode.style.display="block";
+        
+        //기존 img원래대로
+        //img 바뀌기
+
+
+
+
+    }
+}
+
+    }//온로드닫기
+    </script>
+</head>
+<body>
+    <ul id="gnb" class="gnb">
+        <li><a href="#"><img src="images/gnb01.gif" alt="협의회소개" /></a>
+            <ul>
+                <li><a href="#">Sub1-1</a></li>
+                <li><a href="#">Sub1-2</a></li>
+                <li><a href="#">Sub1-3</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/gnb02.gif" alt="협의회소식" /></a>
+            <ul>
+                <li><a href="#">Sub2-1</a></li>
+                <li><a href="#">Sub2-2</a></li>
+                <li><a href="#">Sub2-3</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/gnb03.gif" alt="자료실" /></a>
+            <ul>
+                <li><a href="#">Sub3-1</a></li>
+                <li><a href="#">Sub3-2</a></li>
+                <li><a href="#">Sub3-3</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/gnb04.gif" alt="게시판" /></a>
+            <ul>
+                <li><a href="#">Sub4-1</a></li>
+                <li><a href="#">Sub4-2</a></li>
+                <li><a href="#">Sub4-3</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/gnb05.gif" alt="제주복지망" /></a>
+            <ul>
+                <li><a href="#">Sub5-1</a></li>
+                <li><a href="#">Sub5-2</a></li>
+                <li><a href="#">Sub5-3</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/gnb06.gif" alt="푸드뱅크" /></a>
+            <ul>
+                <li><a href="#">Sub6-1</a></li>
+                <li><a href="#">Sub6-2</a></li>
+                <li><a href="#">Sub6-3</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

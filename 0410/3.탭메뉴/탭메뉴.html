@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴</title>
+    <style type="text/css">
+    body, p ,h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, caption, form, fieldset, legend, input
+    {margin: 0;padding: 0;}
+    body {font-size: 12px;  font-family: Dotum;}
+    img, fieldset {border:0;}
+    li{list-style: none;}
+
+
+    dl {width: 350px; background: url(../3.탭메뉴/images/ta_bg.gif) repeat-x 0 0;}
+    dl:after {content: ""; display: block; clear: both;}
+    dt {float: left; position: relative;}
+    dd {width: 350px; position: absolute; top: 50px;}
+    .post2,.post3 {display: none;}
+
+    ul {line-height: 30px;}
+    p.more {position: absolute; right: 0; top: -45px;}
+    li {border-bottom: 1px solid #ccc; width: 350px;}
+    li a {padding-left: 15px;}
+    span {position: absolute; right: 0;}
+    
+
+    
+    </style>
+
+    <script>
+    window.onload = function(){
+        var tabMenu = document.getElementById("tabMenu"); // dl
+        var myDT = tabMenu.getElementsByTagName("dt"); // dt, dt, dt
+        var myDD = tabMenu.getElementsByTagName("dd"); //dd, dd, dd
+
+        for(var i=0;i<myDT.length;i++){
+            myDT[i].children[0].onclick=myDT[i].children[0].onfocus=function(){ //a
+            //dd가 보이고
+            for(var k=0;k<myDD.length;k++){
+                myDD[k].style.display="none";
+            }
+
+            var theNext = this.parentNode.nextSibling; //공백문자
+            while(theNext.nodeType == 3){
+                theNext = theNext.nextSibling; // dd
+            }
+            theNext.style.display="block";
+            //img가 바뀌고
+            for(var k=0;k<myDT.length;k++){
+                var myImg = myDT[k].children[0].children[0]; // img
+                myImg.src=myImg.src.replace("over.gif","out.gif"); // 회색이미지로 변환
+
+            }
+                this.children[0].src=this.children[0].src.replace("out.gif","over.gif");
+            }
+        }
+
+
+
+ 
+        
+    }//온로드닫기
+    </script>
+</head>
+<body>
+    <dl id="tabMenu" class="tabMenu">
+        <dt>
+            <a href="#"><img src="../3.탭메뉴/images/ta_1_over.gif" alt="공지사항" /></a>
+        </dt>
+        <dd id="post1" class="post1">
+            <ul>
+                <li><a href="#">공지사항<span>2019-12-30</span></a></li>
+                <li><a href="#">공지사항<span>2019-12-30</span></a></li>
+                <li><a href="#">공지사항<span>2019-12-30</span></a></li>
+                <li><a href="#">공지사항<span>2019-12-30</span></a></li>
+                <li><a href="#">공지사항<span>2019-12-30</span></a></li>
+            </ul>
+            <p class="more"><a href="#"><img src="../3.탭메뉴/images/tab_more.gif" alt="공지사항 더보기" /></a></p>
+        </dd>
+        <dt> <a href="#"><img src="../3.탭메뉴/images/ta_2_out.gif" alt="입찰정보" /></a></dt>
+        <dd id="post2" class="post2">
+            <ul>
+                <li><a href="#">입찰정보<span>2019-12-30</span></a></li>
+                <li><a href="#">입찰정보<span>2019-12-30</span></a></li>
+                <li><a href="#">입찰정보<span>2019-12-30</span></a></li>
+                <li><a href="#">입찰정보<span>2019-12-30</span></a></li>
+                <li><a href="#">입찰정보<span>2019-12-30</span></a></li>
+            </ul>
+            <p class="more"><a href="#"><img src="../3.탭메뉴/images/tab_more.gif" alt="입찰정보 더보기" /></a></p>
+        </dd>
+        <dt> <a href="#"><img src="../3.탭메뉴/images/ta_3_out.gif" alt="채용공고" /></a></dt>
+        <dd id="post3" class="post3">
+            <ul>
+                <li><a href="#">채용공고<span>2019-12-30</span></a></li>
+                <li><a href="#">채용공고<span>2019-12-30</span></a></li>
+                <li><a href="#">채용공고<span>2019-12-30</span></a></li>
+                <li><a href="#">채용공고<span>2019-12-30</span></a></li>
+                <li><a href="#">채용공고<span>2019-12-30</span></a></li>
+            </ul>
+            <p class="more"><a href="#"><img src="../3.탭메뉴/images/tab_more.gif" alt="채용공고 더보기" /></a></p>
+        </dd>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <style type="text/css">
+    body, p ,h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, caption, form, fieldset, legend, input
+    {margin: 0;padding: 0;}
+    body {font-size: 12px;  font-family: Dotum;}
+    img, fieldset {border:0;}
+    li{list-style: none;}
+
+
+    dl {width: 350px; background: url(../3.탭메뉴/images/ta_bg.gif) repeat-x 0 0;}
+    dl:after {content: ""; display: block; clear: both;}
+    dt {float: left; position: relative;}
+    dd {width: 350px; position: absolute; top: 50px;}
+    .post2,.post3 {display: none;}
+
+    ul {line-height: 30px;}
+    p.more {position: absolute; right: 0; top: -45px;}
+    li {border-bottom: 1px solid #ccc; width: 350px;}
+    li a {padding-left: 15px;}
+    span {position: absolute; right: 0;}
+    
+
+    
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#tabMenu>dt>a").bind("focus click",(function(){ // a
+            //글자
+            $("#tabMenu>dd").css("display","none"); //기존dd안보이게
+            $(this).parent().next().css("display","block"); //dd보이게
+
+            //이미지
+            $("#tabMenu>dt>a>img").each(function(){
+                $(this).attr("src",$(this).attr("src").replace("over.gif","out.gif"));
+            });
+
+            $(this).children().attr("src",$(this).children().attr("src").replace("out.gif","over.gif"));
+        }));
+
+
+    });//독레디
+    </script>
+</head>
+<body>
+    <dl id="tabMenu" class="tabMenu">
+        <dt>
+            <a href="#"><img src="../3.탭메뉴/images/ta_1_over.gif" alt="공지사항" /></a>
+        </dt>
+        <dd id="post1" class="post1">
+            <ul>
+                <li><a href="#">공지사항<span>2019-12-30</span></a></li>
+                <li><a href="#">공지사항<span>2019-12-30</span></a></li>
+                <li><a href="#">공지사항<span>2019-12-30</span></a></li>
+                <li><a href="#">공지사항<span>2019-12-30</span></a></li>
+                <li><a href="#">공지사항<span>2019-12-30</span></a></li>
+            </ul>
+            <p class="more"><a href="#"><img src="../3.탭메뉴/images/tab_more.gif" alt="공지사항 더보기" /></a></p>
+        </dd>
+        <dt> <a href="#"><img src="../3.탭메뉴/images/ta_2_out.gif" alt="입찰정보" /></a></dt>
+        <dd id="post2" class="post2">
+            <ul>
+                <li><a href="#">입찰정보<span>2019-12-30</span></a></li>
+                <li><a href="#">입찰정보<span>2019-12-30</span></a></li>
+                <li><a href="#">입찰정보<span>2019-12-30</span></a></li>
+                <li><a href="#">입찰정보<span>2019-12-30</span></a></li>
+                <li><a href="#">입찰정보<span>2019-12-30</span></a></li>
+            </ul>
+            <p class="more"><a href="#"><img src="../3.탭메뉴/images/tab_more.gif" alt="입찰정보 더보기" /></a></p>
+        </dd>
+        <dt> <a href="#"><img src="../3.탭메뉴/images/ta_3_out.gif" alt="채용공고" /></a></dt>
+        <dd id="post3" class="post3">
+            <ul>
+                <li><a href="#">채용공고<span>2019-12-30</span></a></li>
+                <li><a href="#">채용공고<span>2019-12-30</span></a></li>
+                <li><a href="#">채용공고<span>2019-12-30</span></a></li>
+                <li><a href="#">채용공고<span>2019-12-30</span></a></li>
+                <li><a href="#">채용공고<span>2019-12-30</span></a></li>
+            </ul>
+            <p class="more"><a href="#"><img src="../3.탭메뉴/images/tab_more.gif" alt="채용공고 더보기" /></a></p>
+        </dd>
+    </dl>
+</body>
+</html>
