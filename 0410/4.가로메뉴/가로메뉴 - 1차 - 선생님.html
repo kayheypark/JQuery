@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>가로메뉴</title>
+<style type="text/css">
+li{padding:0;margin:0;list-style-type:none;}
+li img{vertical-align:top;}
+.gnb{position:relative;width:100%;}
+.gnb li{float:left;}
+.gnb li ul{position:absolute;left:0;top:40px;}
+.gnb li.m2 ul{left:100px;}
+.gnb li.m3 ul{left:200px;}
+.gnb li.m4 ul{left:300px;}
+.gnb li.m5 ul{left:400px;}
+.gnb li.m6 ul{left:500px;}
+.gnb li ul li{padding:0 15px;}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+	//전역변수
+	var aout=1; // a에서 마우스를 뗄 때
+	var ulout=1; // ul에서 마우스를 뗄 때
+
+	function hideMenu(){
+		var gnb=document.getElementById("gnb"); //큰ul
+		var liMenu=gnb.children;//li 6개
+		var ulMenu=gnb.getElementsByTagName("ul");//하위ul 6개
+		
+		if(aout && ulout == 1){ //사라져라
+			//하위 ul 안보여라
+			for(var i=0;i<ulMenu.length;i++){
+				ulMenu[i].style.display="none";
+				}
+			//img 회색으로 바뀌어라
+			for(var j=0;j<liMenu.length;j++){
+				var myImg=liMenu[j].children[0].children[0];//img
+				myImg.src=myImg.src.replace("_over.gif",".gif");
+			}
+		}
+
+	}//function hideMenu 닫기
+
+
+
+
+
+window.onload=function(){
+	var gnb=document.getElementById("gnb"); //큰ul
+	var liMenu=gnb.children;//li 6개
+	var ulMenu=gnb.getElementsByTagName("ul");//하위ul 6개
+
+	for(var i=0;i<ulMenu.length;i++){
+		ulMenu[i].style.display="none";
+	}
+
+	for(var i=0;i<liMenu.length;i++){
+		liMenu[i].children[0].onmouseover=liMenu[i].children[0].onfocus=function(){//a
+			for(var j=0;j<ulMenu.length;j++){
+				ulMenu[j].style.display="none";
+			}
+			
+			var myNext = this.nextSibling;
+			if(myNext.nodeType !=1){
+				myNext = myNext.nextSibling;
+			}
+			myNext.style.display="block";
+
+			for(var j=0;j<liMenu.length;j++){
+				var myImg=liMenu[j].children[0].children[0];//img
+				myImg.src=myImg.src.replace("_over.gif",".gif");
+			}
+			this.children[0].src=this.children[0].src.replace(".gif","_over.gif");
+
+			aout=0;	
+		}//onmouseover
+
+		liMenu[i].children[0].onmouseout=liMenu[i].children[0].onblur=function(){ //a
+			aout=1;
+			var myAuto = setTimeout(hideMenu,1000); //셋타임아웃 - 1회성 함수호출
+		}//onmouseout, blur
+
+		ulMenu[i].onmouseover=ulMenu.onfocus=function(){
+			ulout=0;
+		}//ul onmouseover
+		ulMenu[i].onmouseout=ulMenu.onblur=function(){
+			ulout=1;
+			var myAuto = setTimeout(hideMenu,1000); //셋타임아웃 - 1회성 함수호출
+		}//ul onmouseout
+
+	}//for문
+}
+//]]>
+</script>
+</head>
+<body>
+<ul id="gnb" class="gnb">
+	<li class="m1">
+		<a href="#" id="m1">
+			<img src="images/gnb01.gif" alt="Menu1" />
+		</a>
+		<ul>
+			<li><a href="#">Sub1-1</a></li>
+			<li><a href="#">Sub1-2</a></li>
+			<li><a href="#">Sub1-3</a></li>
+		</ul>
+	</li>
+	<li class="m2">
+		<a href="#" id="m2"><img src="images/gnb02.gif" alt="Menu2" /></a>
+		<ul>
+			<li><a href="#">Sub2-1</a></li>
+			<li><a href="#">Sub2-2</a></li>
+			<li><a href="#">Sub2-3</a></li>
+		</ul>
+	</li>
+	<li class="m3">
+		<a href="#" id="m3"><img src="images/gnb03.gif" alt="Menu3" /></a>
+		<ul>
+			<li><a href="#">Sub3-1</a></li>
+			<li><a href="#">Sub3-2</a></li>
+			<li><a href="#">Sub3-3</a></li>
+		</ul>
+	</li>
+	<li class="m4">
+		<a href="#" id="m4"><img src="images/gnb04.gif" alt="Menu4" /></a>
+		<ul>
+			<li><a href="#">Sub4-1</a></li>
+			<li><a href="#">Sub4-2</a></li>
+			<li><a href="#">Sub4-3</a></li>
+		</ul>
+	</li>
+	<li class="m5">
+		<a href="#" id="m5"><img src="images/gnb05.gif" alt="Menu5" /></a>
+		<ul>
+			<li><a href="#">Sub5-1</a></li>
+			<li><a href="#">Sub5-2</a></li>
+			<li><a href="#">Sub5-3</a></li>
+		</ul>
+	</li>
+	<li class="m6">
+		<a href="#" id="m6"><img src="images/gnb06.gif" alt="Menu6" /></a>
+		<ul>
+			<li><a href="#">Sub6-1</a></li>
+			<li><a href="#">Sub6-2</a></li>
+			<li><a href="#">Sub6-3</a></li>
+		</ul>
+	</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오토배너</title>
+    <style type="text/css">
+    *{padding: 0; margin: 0;}
+    img {border: 0; vertical-align: top;}
+    .galleryZone {width: 400px; margin: 0 auto; background: #000;}
+    ul {list-style: none;}
+
+    .galleryZone li {float: left; width: 100px; text-align: center;}
+    .galleryZone:after {content: "";display: block;clear: both;}
+    .galleryZone ul {padding: 5px 0;}
+    .galleryZone {padding-bottom: 5px;}
+    </style>
+    <script type="text/javascript" src="js/autoBanner.js"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+        
+    //]]>
+    </script>
+</head>
+<body>
+    <div id="galleryZone" class="galleryZone">
+        <p><a href="#" id="aGallery"><img src="img_1.jpg" alt="큰이미지" id="gallery" /></a></p>
+        <ul id="galleryList">
+            <li><a href="img_1.jpg"><img src="img_s1_out.jpg" alt="그림1" /></a></li>
+            <li><a href="img_2.jpg"><img src="img_s2_out.jpg" alt="그림2" /></a></li>
+            <li><a href="img_3.jpg"><img src="img_s3_out.jpg" alt="그림3" /></a></li>
+            <li><a href="img_4.jpg"><img src="img_s4_out.jpg" alt="그림4" /></a></li>
+        </ul>
+    </div>
+    
+</body>
+</html>
