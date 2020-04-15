@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형웹 : Column Drop</title>
+    <style type="text/css">
+    * {margin: 0;padding: 0;}
+    #box_a {float: left; width: 30%; height: 400px; background:#fcb354;}
+    #box_b {float: left; width: 50%; height: 400px; background:#f1779e;}
+    #box_c {float: right; width: 20%; height: 400px; background:#24bbaf;}
+    @media screen and (max-width: 1024px){
+        #box_a {}
+        #box_b {width: 70%;}
+        #box_c {clear: both; float:none; width: 100%;}
+    }
+    @media screen and (max-width: 800px){
+        #box_a {float: none; width: 100%;}
+        #box_b {float: none; width: 100%;}
+        #box_c {width: 100%;}
+    }
+
+    </style>
+</head>
+<body>
+    <div id="box_a"></div>
+    <div id="box_b"></div>
+    <div id="box_c"></div>
+</body>
+</html>

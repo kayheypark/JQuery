@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형웹 : Tiny Tweaks</title>
+    <style type="text/css">
+
+    /*
+    부모는 무조건 100%
+    ul 100%
+    li 18% margin 1%
+
+    자식/부모*100=%
+     */
+    *{margin: 0;padding: 0;}
+    ul, li {list-style: none;}
+    #box_a {height: 400px; background:#f1779e;}
+    .list {width: 80%; margin: 0 auto; padding-top: 50px;}
+    .list li {float: left; width: 18%; margin: 1%; background:#fff;}
+
+    @media screen and (max-width: 1024px){ /*4개*/ 
+    .list {width: 95%;}
+    .list li {width: 23%;}
+
+    }
+    @media screen and (max-width: 800px){ /*3개*/
+    .list li {width: 31.333%;}
+    }
+    @media screen and (max-width: 480px){ /*2개*/
+    .list li {width: 48%;}
+    }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="box_a">
+            <ul class="list">
+                <li>a</li>
+                <li>b</li>
+                <li>c</li>
+                <li>d</li>
+                <li>e</li>
+                <li>f</li>
+                <li>g</li>
+                <li>h</li>
+                <li>i</li>
+                <li>j</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
