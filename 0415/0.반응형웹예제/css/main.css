@@ -1,0 +1,55 @@
+@import url(reset.css);
+/*리셋파일*/
+
+/* common */
+
+@font-face{font-family: NanumGothic;
+            src: url("../font/나눔고딕B.ttf");
+}
+@font-face{font-family: NanumGothicEB;
+            src: url("../font/NanumGothicExtraBold.woff");
+}
+
+body {font-size: 14px; font-family: NanumGothic, sans-serif;}
+a {text-decoration: none; color:#999;}
+a:hover {color: #666;}
+
+@media (max-width:767px){ /*최소~최대 767, 스마트폰 크기*/
+
+}
+@media (min-width:768px) and (max-width:1023px){ /*최소768~1023, 태블릿 크기*/
+
+}
+@media (min-width:1024px){ /*최소1024~최대, pc 크기*/
+
+}
+/* layout */
+body {background:url("../images/body_bg.gif") repeat-x 0 0;}
+body>header {position: relative; width: 1003px; margin: 0 auto;}
+body>section {width: 1003px; margin: 0 auto;}
+#container {width: 1003px; margin: 0 auto; border-top: 3px double #ccc; padding:30px 0;}
+#container:after{content:"";display:block;clear:both;}
+    .content1 {float: left; width: 201px; padding: 0 35px 0 10px;}
+    .content2 {float: left; width: 470px;}
+    .content3 {float: left; width: 248px; padding-right: 10px;}
+body>footer {background:url("../images/foot_bg.gif") repeat-x 0 0;}
+body>footer>.foot_inner {width: 1003px; margin: 0 auto; padding: 20px 0; color:#999;}
+
+/* header */
+body>header>h1 {padding-top: 27px;}
+body>header>h2 {margin-bottom: 14px; font-size: 9px; color:#555;}
+
+/* 탑메뉴 */
+.topMenu {position: absolute; right: 0; top: 20px;}
+.topMenu dd {display:inline; padding-left: 20px;}
+/* 자료검색 */
+body>header>form {position: absolute; right: 0; top: 60px;}
+/* 주메뉴 */
+nav.gnb {}
+
+/* 전체메뉴 버튼 */
+.allmenu_view {}
+/* 전체메뉴 박스 */
+.allMenu_box {}
+/* 전체메뉴 닫기 */
+.all_close {}
