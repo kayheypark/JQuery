@@ -78,7 +78,7 @@ nav.allMenu_box>ul>li:last-child {border:none;}
 a.all_close {display: block; text-align: center; padding: 5px; background:#369; color: #fff;}
 
 /*section 배너 */
-body>section>div.book_frame {width: 200%;}
+body>section>div.book_frame {width: 200%; position: relative; left: 0;}
 body>section>div.book_frame:after {content: ""; display: block; clear: both;}
 body>section>div.book_frame>section {float: left; width: 50%; padding-top: 30px;} /* 실제크기100% */
 
@@ -132,8 +132,8 @@ body>section>div.book_frame>section {float: left; width: 50%; padding-top: 30px;
 .t2 {left: 130px;}
 
 .content2>section>div {margin-top: 37px; border-top: 1px solid #aaa;}
-.item1 {display: none;}
-.item2 {}
+.item1 {}
+.item2 {display: none;}
 /* 새로 나온 책 */
 .content2>section>div article {width: 100%; margin-top: 29px; font-size: 13px;
                                 box-sizing: border-box;}
@@ -212,10 +212,10 @@ nav.gnb>ul>li{width: 25%;;height: 39px;background:#3da7db; border-right: 1px sol
                 box-sizing: border-box;} /* box-sizing:;은 border 또는 padding만 실제크기에 포함 */
 nav.gnb>ul>li>a {display: block; padding-top: 10px; color:#fff; text-align: center;}
 nav.gnb>ul>li>ul{position: absolute; left: 0; top: 38px;}
-nav.gnb>ul>li:first-child>ul{left: 40px;}
-nav.gnb>ul>li:nth-child(2)>ul{left: 230px;}
-nav.gnb>ul>li:nth-child(3)>ul{left: 405px;}
-nav.gnb>ul>li:last-child>ul{left: 640px;}
+nav.gnb>ul>li:first-child>ul{left: 2%;}
+nav.gnb>ul>li:nth-child(2)>ul{left: 20%;}
+nav.gnb>ul>li:nth-child(3)>ul{left: 35%;}
+nav.gnb>ul>li:last-child>ul{left: 58%;}
 
 nav.gnb>ul>li>ul>li {padding: 0 10px;}
 nav.gnb>ul>li>a:hover {color: #333;}
@@ -241,7 +241,7 @@ nav.allMenu_box>ul>li:last-child {border:none;}
 a.all_close {display: block; text-align: center; padding: 5px; background:#369; color: #fff;}
 
 /*section 배너 */
-body>section>div.book_frame {width: 200%;}
+body>section>div.book_frame {width: 200%; position: relative; left: 0;}
 body>section>div.book_frame:after {content: ""; display: block; clear: both;}
 body>section>div.book_frame>section {float: left; width: 50%; padding-top: 30px;} /* 실제크기100% */
 
@@ -295,8 +295,8 @@ body>section>div.book_frame>section {float: left; width: 50%; padding-top: 30px;
 .t2 {left: 130px;}
 
 .content2>section>div {margin-top: 37px; border-top: 1px solid #aaa;}
-.item1 {display: none;}
-.item2 {}
+.item1 {}
+.item2 {display: none;}
 /* 새로 나온 책 */
 .content2>section>div article {width: 100%; margin-top: 29px; font-size: 13px;
                                 box-sizing: border-box;}
@@ -374,6 +374,9 @@ nav.gnb>ul>li:nth-child(2)>ul{left: 230px;}
 nav.gnb>ul>li:nth-child(3)>ul{left: 405px;}
 nav.gnb>ul>li:last-child>ul{left: 640px;}
 
+/* nav.gnb>ul>li:hover>a {height: 32px; background: url(../images/over_icon.gif) no-repeat 50% 100%;}
+nav.gnb>ul>li:hover>ul {display: block;} */
+
 nav.gnb>ul>li>ul>li {padding: 0 10px;}
 nav.gnb>ul>li>a:hover {color: #333;}
 /* 전체메뉴 버튼 */
@@ -395,7 +398,7 @@ nav.allMenu_box>ul>li>ul>li {border-bottom: 1px dashed #ccc; padding: 5px 0;}
 a.all_close {position: absolute; right: 0; bottom: 0px; padding: 5px; background:#369; color: #fff;}
 
 /*section 배너 */
-body>section>div.book_frame {width: 200%;}
+body>section>div.book_frame {width: 200%; position: relative; left: 0;}
 body>section>div.book_frame:after {content: ""; display: block; clear: both;}
 body>section>div.book_frame>section {float: left; width: 50%; padding-top: 30px;} /* 실제크기100% */
 
@@ -446,8 +449,8 @@ body>section>div.book_frame>section {float: left; width: 50%; padding-top: 30px;
 .t2 {right: 11px;}
 
 .content2>section>div {margin-top: 37px; border-top: 1px solid #aaa;}
-.item1 {display: none;}
-.item2 {}
+.item1 {}
+.item2 {display: none;}
 /* 새로 나온 책 */
 .content2>section>div article {width: 100%; margin-top: 40px; font-size: 13px;}
 .content2>section>div article:after {content: ""; display: block; clear: both;}
