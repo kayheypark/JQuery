@@ -19,7 +19,7 @@ a:hover {color: #666;}
 /* layout */
 body {}
 body>header {z-index: 40; position: relative; width: 95%; margin: 0 auto; }
-body>section {z-index: 30; position: relative; width: 95%; margin: 0 auto;}
+body>section {overflow: hidden; z-index: 30; position: relative; width: 95%; margin: 0 auto;}
 #container {width: 95%; margin: 0 auto; border-top: 3px double #ccc; padding:30px 0;}
     .content1 {display: none;}
     .content2 {position: relative;width: 100%;}
@@ -78,9 +78,9 @@ nav.allMenu_box>ul>li:last-child {border:none;}
 a.all_close {display: block; text-align: center; padding: 5px; background:#369; color: #fff;}
 
 /*section 배너 */
-body>section>div.book_frame {width: 200%; position: relative; left: 0;}
+body>section>div.book_frame {width: 1000%; position: relative; left: 0;}
 body>section>div.book_frame:after {content: ""; display: block; clear: both;}
-body>section>div.book_frame>section {float: left; width: 50%; padding-top: 30px;} /* 실제크기100% */
+body>section>div.book_frame>section {float: left; width: 10%; padding-top: 30px;} /* 실제크기100% */
 
 .book_frame>section>h3 {float: right; padding-right: 50px;}
 .book_frame>section>ul {width: 100%;}
@@ -182,7 +182,7 @@ body>section>div.book_frame>section {float: left; width: 50%; padding-top: 30px;
 /* layout */
 body {background:url("../images/body_bg.gif") repeat-x 0 0;}
 body>header {z-index: 40; position: relative; width: 95%; margin: 0 auto;}
-body>section {z-index: 30; position: relative; width: 95%; margin: 0 auto;}
+body>section {overflow: hidden; z-index: 30; position: relative; width: 95%; margin: 0 auto;}
 #container {width: 95%; margin: 0 auto; border-top: 3px double #ccc; padding:30px 0;}
 #container:after{content:"";display:block;clear:both;}
     .content1 {float: left; width: 22%; max-width: 201px; padding: 0 0 20px 10px;}
@@ -241,9 +241,9 @@ nav.allMenu_box>ul>li:last-child {border:none;}
 a.all_close {display: block; text-align: center; padding: 5px; background:#369; color: #fff;}
 
 /*section 배너 */
-body>section>div.book_frame {width: 200%; position: relative; left: 0;}
+body>section>div.book_frame {width: 1000%; position: relative; left: 0;}
 body>section>div.book_frame:after {content: ""; display: block; clear: both;}
-body>section>div.book_frame>section {float: left; width: 50%; padding-top: 30px;} /* 실제크기100% */
+body>section>div.book_frame>section {float: left; width: 10%; padding-top: 30px;} /* 실제크기100% */
 
 .book_frame>section>h3 {float: right; padding-right: 50px;}
 .book_frame>section>ul {width: 100%;}
@@ -341,7 +341,7 @@ body>section>div.book_frame>section {float: left; width: 50%; padding-top: 30px;
 /* layout */
 body {background:url("../images/body_bg.gif") repeat-x 0 0;}
 body>header {z-index: 40; position: relative; width: 1003px; margin: 0 auto;}
-body>section {z-index: 30; position: relative; width: 1003px; margin: 0 auto;}
+body>section {overflow: hidden; z-index: 30; position: relative; width: 1003px; margin: 0 auto;}
 #container {width: 1003px; margin: 0 auto; border-top: 3px double #ccc; padding:30px 0;}
 #container:after{content:"";display:block;clear:both;}
     .content1 {float: left; width: 201px; padding: 0 35px 0 10px;}
@@ -398,9 +398,9 @@ nav.allMenu_box>ul>li>ul>li {border-bottom: 1px dashed #ccc; padding: 5px 0;}
 a.all_close {position: absolute; right: 0; bottom: 0px; padding: 5px; background:#369; color: #fff;}
 
 /*section 배너 */
-body>section>div.book_frame {width: 200%; position: relative; left: 0;}
+body>section>div.book_frame {width: 1000%; position: relative; left: 0;}
 body>section>div.book_frame:after {content: ""; display: block; clear: both;}
-body>section>div.book_frame>section {float: left; width: 50%; padding-top: 30px;} /* 실제크기100% */
+body>section>div.book_frame>section {float: left; width: 10%; padding-top: 30px;} /* 실제크기100% */
 
 .book_frame>section>h3 {float: right; padding-right: 50px;}
 .book_frame>section>ul {width: 100%;}

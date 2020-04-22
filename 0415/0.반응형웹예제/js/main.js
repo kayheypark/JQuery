@@ -89,8 +89,37 @@ $(document).ready(function () {
 
     });
 
+//모바일 기기의 방향을 전환(가로/세로)할 때 화면의 너비가 달라지는 것에 대비해서 항상 바른 위치에 있도록 
+//애니메이션 적용
 
+$("body>section").bind("orientationchange",function(e){
+        $book_w=$("body>section").width();
+        $(".book_frame").stop().animate({left:-$book_w*$bnnNum},300);
+    });
 
+    //모바일에서
+    $("body>section").bind("swipeleft",function(){
+        $(".next").trigger("click");//trigger() 클릭한거처럼 강제로 이벤트 발생
+    });
 
+    $("body>section").bind("swiperight",function(){
+        $(".prev").trigger("click");//trigger() 클릭한거처럼 강제로 이벤트 발생
+    });
+
+    //autoBanner
+    function autoBanner(){
+        if($bnnNum>=lastNum) $bnnNum=-1;
+        $bnnNum++;
+
+        $book_w=$("body>section").width();
+        $("div.book_frame").stop().animate({"left":-$book_w*$bnnNum},300,"linear",function(){
+            $(".book_roll img").attr("src","images/state_out.png");
+            $(".book_roll img").eq($bnnNum).attr("src","images/state_over.png");
+        });
+       //next버튼 눌렀을때
+
+    }
+
+    var $autoBtn = setInterval(autoBanner,5000);
 
 }); // 독레디 닫기
