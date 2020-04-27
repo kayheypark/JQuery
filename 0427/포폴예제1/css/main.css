@@ -1,0 +1,98 @@
+/* @import url(reset.css); */
+/*리셋*/
+
+@charset "utf-8";
+/*reset*/
+*{margin: 0; padding: 0;}
+ol, ul {list-style: none;}
+a {text-decoration: none; color: #555;}
+img {border:0;}
+.blind {position: absolute; left: 0; top: 0; width: 0; height: 0; font-size: 0; line-height: 0;
+text-indent: -9999px; overflow: hidden;}
+body {font-size: 12px; line-height: 1.6; font-family: "Poiret One", cursive; color: #555;}
+
+/* 레이아웃 */
+body>header{position: fixed; left: 0; top: 0; width: 15%; height: 100%; background: #fff;}
+nav.lnb{position: relative; width: 85%; height: 35px; background: #212121; margin-left: 15%;}
+
+body>section{ width: 85%; margin-left: 15%;}
+body>section>article{float: left; height: 260px;}
+
+body>section>article:nth-of-type(1) { width: 60%; height: 520px; background: #ddd;}
+body>section>article:nth-of-type(2) { width: 40%; background: #ccc;}
+body>section>article:nth-of-type(3) { width: 20%; background: #111;}
+body>section>article:nth-of-type(4) { width: 20%; background: #222;}
+body>section>article:nth-of-type(5) { width: 20%; background: #333;}
+body>section>article:nth-of-type(6) { width: 40%; background: #444;}
+body>section>article:nth-of-type(7) { width: 20%; background: #555;}
+body>section>article:nth-of-type(8) { width: 20%; background: #666;}
+body>section>article:nth-of-type(9) { width: 40%; background: #777;}
+body>section>article:nth-of-type(10) { width: 20%; background: #888;}
+body>section>article:nth-of-type(11) { width: 20%; background: #999;}
+body>section>article:nth-of-type(12) { width: 20%; background: #ddd;}
+
+/* header */
+h1 {position: absolute; left: 50%; top: 70px; margin-left: -90px;
+    width: 180px; height: 136px; background: url(../img/logo1.png); background-size: contain;
+    text-indent: -9999px; overflow: hidden;}
+nav.gnb {position: absolute; right: 57px; top: 300px;}
+nav.gnb a {display: block; padding: 8px 30px; font-size: 17px; font-weight: bold; color: #555;
+            line-height: 1.8;}
+nav.gnb a:hover {color: skyblue;}
+nav.gnb a i {margin-right: 10px;}
+
+dl.topMenu {position: absolute; right: 50%; bottom: 50px; width: 90px; height: 47px; margin-right: -45px;}
+dl.topMenu dd {float: left;}
+
+
+
+
+
+
+/* lnb */
+.lnb ul li:nth-child(1){position: absolute; left: 10px; top: 5px;}
+.lnb ul li:nth-child(2){position: absolute; left: 150px; top: 5px;}
+.lnb ul li:nth-child(3){position: absolute; right: 90px; top: 5px;}
+.lnb ul li:nth-child(4){position: absolute; right: 0px; top: 5px;}
+
+/* section */
+article>div {position: relative; overflow: hidden; width: 100%; height: 100%;}
+
+/* 배경이미지 삽입 */
+article .bg1 {background: url(../img/pic1.jpg) no-repeat 50% 50%;}
+article .bg2 {background: url(../img/pic2.jpg) no-repeat 50% 50%;}
+article .bg3 {background: url(../img/pic3.jpg) no-repeat 50% 50%;}
+article .bg4 {background: url(../img/pic4.jpg) no-repeat 50% 50%;}
+article .bg5 {background: url(../img/pic5.jpg) no-repeat 50% 50%;}
+article .bg6 {background: url(../img/pic6.jpg) no-repeat 50% 50%;}
+article .bg7 {background: url(../img/pic7.jpg) no-repeat 50% 50%;}
+article .bg { background-size: cover;} /*꽉채우기*/
+
+article div.bg span { position: absolute; right: 20px; bottom: 20px;
+                        font-size: 60px; color: #fff;
+                        transform: scale(10); opacity: 0;
+                        transition: all 0.6s linear 0s;}
+article div.bg:hover span {transform: scale(1); opacity: 1;}
+
+article div.bg1 span {position: absolute; right: -6px; bottom: -76px;
+                    font-size: 170px; color: #fff;
+                    transform: scale(1); opacity: 1;
+                    transition: all 0.5s linear 0s ;}
+
+article div.bg1:hover span {transform: rotateY(180deg); color: #222;}
+
+/* 텍스트박스 */
+article div.txt { padding: 40px 30px;box-sizing: border-box; color: #666; background: #fff;}
+
+article:nth-of-type(3) div.txt {background:#bff7fa;}
+article:nth-of-type(11) div.txt {background:#e3f1fb;}
+
+article div.txt i {position: absolute; right: -200px; bottom: -70px;
+                    font-size: 300px; color: #b3effc; opacity: 0;
+                    transition: all 0.7s linear 0s;}
+article:hover div.txt i {right: 0; opacity: 0.8;}
+
+article div.txt p strong {font-size: 30px; font-weight: normal;}
+article:hover div.txt {background: #6ce2fb; color: #fff;}
+
+article div.txt p em {}
