@@ -227,22 +227,25 @@ dl.topMenu {display: none;}
     body>section>article:nth-of-type(12) {display: none;}
 
 }
-@media screen and (min-width:480px) and (max-width:639px) { /* 4번째 480~639*/
+@media screen and (min-width:480px) and (max-width:639px) { /* 5555번째 480~639*/
 
 
 /* 레이아웃 */
-body>header{position: relative; left: 0; top: 0; width: 100%; height: 80px; background: #fff;}
-nav.lnb{position: relative; width: 100%; height: 35px; background: #212121; margin-left: 0;}
+body>header{position: relative; left: 0; top: 0; width: 100%; height: 130px; background: #fff;}
+nav.lnb{display: none;}
 body>section{ width: 100%; margin-left: 0;}
 body>section>article{float: left; height: 260px;}
 
 /* header */
-h1 {position: absolute; left: 20px; top: 20px; margin-left: 0;
+h1 {position: absolute; left: 50%; top: 20px; margin-left: -100px;
     width: 200px; height: 40px; background: url(../img/logo2.png); background-size: contain;
     text-indent: -9999px; overflow: hidden;}
-nav.gnb {position: absolute; right: 10px; top: 20px;} /*2단계에서 추가된 내용*/
-nav.gnb li {float: left;}
+nav.gnb {position: absolute; right: 0; top: 80px; width: 100%;} /*2단계에서 추가된 내용*/
+nav.gnb ul {width: 100%;}
+nav.gnb ul:after {content: ""; display: block; clear: both;}
+nav.gnb li {float: left; width: 25%; text-align: center;}
 nav.gnb a {padding: 8px 10px;} /*2단계에서 추가된 내용*/
+nav.gnb a i {margin-right: 8px;}
 
 dl.topMenu {display: none;}
 
@@ -264,54 +267,41 @@ dl.topMenu {display: none;}
     body>section>article:nth-of-type(11) { width: 50%}
     body>section>article:nth-of-type(12) {width: 50%;}
 
-    p > em {display: none;}
+    article div.bg1 span { bottom: -50px; font-size: 120px; color: #fff;}
+    article div.txt p strong {font-size: 25px;}
+    article div.txt p em {display: none;}
 
 
 }
-@media screen and (max-width:479px) { /* 5번째 0~479*/
+@media screen and (max-width:479px) { /* 6번째 0~479*/
 
 /* 레이아웃 */
-body>header{position: relative; left: 0; top: 0; width: 100%; height: 80px; background: #fff;}
-nav.lnb{position: relative; width: 100%; height: 35px; background: #212121; margin-left: 0;}
+body>header{z-index: 40; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #fff;
+background: rgba(255, 255, 255, 0);}
+nav.lnb{display: none;}
 body>section{ width: 100%; margin-left: 0;}
-body>section>article{float: left; height: 150px;}
+body>section>article{float: left; height: 260px;}
 
 /* header */
-h1 {position: absolute; left: 20px; top: 20px; margin-left: 0;
-    width: 200px; height: 40px; background: url(../img/logo2.png); background-size: contain;
+h1 {position: absolute; left: 50%; top: 20px; margin-left: -70px;
+    width: 140px; height: 136px; background: url(../img/logo1.png) no-repeat 0 0; background-size: contain;
     text-indent: -9999px; overflow: hidden;}
-nav.gnb {position: absolute; right: 10px; top: 20px;} /*2단계에서 추가된 내용*/
-nav.gnb li {float: left;}
-nav.gnb a {padding: 8px 10px;} /*2단계에서 추가된 내용*/
+nav.gnb {position: absolute; right: 50%; top: 140px; width: 250px; margin-right: -125px;} /*2단계에서 추가된 내용*/
+nav.gnb a {display: block; padding: 8px 10px; background: #000; color: #fff; opacity: 0.5;
+            border-radius: 10px; margin: 8px;
+            transition: all 0.5s ease 0s;} /*2단계에서 추가된 내용*/
+nav.gnb a:hover {opacity: 1; transform: scale(1.1);}
+nav.gnb a i {margin-right: 8px;}
 
 dl.topMenu {display: none;}
+body>section>article {display: none;}
 
 
+    body>section>article:nth-of-type(1) { display: block; position: fixed; width: 100%; height: 100%;}
+    body>section>article:nth-of-type(1) span {display: none;}
 
-    body>section>article:nth-of-type(1) { width: 100%; height: 300px; background: #ddd;}
-    body>section>article:nth-of-type(2) { width: 100%}
-    body>section>article:nth-of-type(3) { display: none;}
-    
-    body>section>article:nth-of-type(4) {display: none;}
-    body>section>article:nth-of-type(5) { width: 50%}
-    body>section>article:nth-of-type(6) { width: 50%}
-    
-    body>section>article:nth-of-type(7) { display: none;}
-    body>section>article:nth-of-type(8) { width: 50%}
-    body>section>article:nth-of-type(9) { width: 50%}
-    
-    body>section>article:nth-of-type(10) { display: none;}
-    body>section>article:nth-of-type(11) { width: 50%}
-    body>section>article:nth-of-type(12) {width: 50%;}
-
-    p > em {display: none;}
-    
-    
-    article div.bg1 span {position: absolute; right: -6px; bottom: -36px;
-        font-size:90px; color: #fff;
-        transform: scale(1); opacity: 1;
-        transition: all 0.5s linear 0s ;}
-
-    article div.bg1:hover span {transform: rotateY(180deg); color: #222;}
+    article div.bg1 span { bottom: -50px; font-size: 120px;}
+    article div.txt p strong {font-size: 25px;}
+    article div.txt p em {display: none;}
 
 }
