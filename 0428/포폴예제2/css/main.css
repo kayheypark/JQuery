@@ -64,15 +64,15 @@ section.side>div.cont {position: absolute; left: 150px; bottom: 0;
         transition: all 1s ease 0s;}
 section.side:hover>div.cont {left: 50px;}
 
-div.cont p {position: absolute; left: 50px; bottom: 50px;
-            width: 300px; height: 100px;
+div.cont p {position: absolute; left: 50px; /*left: 250px;*/ bottom: 50px; width: 300px; height: 100px;
         transition: all 0.4s ease 0s;}
+        
+div.cont p:first-of-type {bottom: 270px; transform: translateX(200px); transition: all 0.4s ease 0s;}
+div.cont p:nth-of-type(2) {bottom: 160px; transform: translateX(200px); transition: all 0.8s ease 0s;}
+div.cont p:last-of-type {bottom: 50px; transform: translateX(200px); transition: all 1.2s ease 0s;}
 
-section.side:hover>div.cont p{left: 50px;}
+section.side:hover>div.cont p{/*left: 50px;*/ transform: translateX(0);}
 
-div.cont p:first-child {bottom: 270px; transition: all 0.4s ease 0s;}
-div.cont p:nth-of-type(2) {bottom: 160px; transition: all 0.8s ease 0s;}
-div.cont p:last-child {bottom: 50px; transition: all 1.2s ease 0s;}
 
 div.cont p em {display: inline-block;  transform: skewX(40deg) !important; color: #a0bd50;
                 font-size: 16px; line-height: 1.7; font-family: arial; font-weight: bold;}
@@ -82,3 +82,29 @@ div.cont p img:hover {opacity: 1;}
 div.cont p a {}
 
 /* 웹폰트 텍스트박스 */
+.txtBox {position: fixed; right: 70px; top: 200px; width: 340px;}
+.title {position: absolute; right: 0; top: 0; font-family: "Monoton", cursive; font-size: 160px;
+            color: #a0bd50; letter-spacing: -1px;}
+.title em {font-family: "Play", sans-serif; font-size: 50px; color: #fff;}
+
+.txt {position: absolute; right: 0; top: 200px; font-family: "Play", sans-serif; font-size: 34px;
+        color: #bbb; letter-spacing: -2px;}
+.txt b {margin-left: 20px; font-family: "Arial"; color: #b9fb05; font-weight: bold;}
+
+/* <<<< 자동롤링 버튼*/
+div.btnCont {position: absolute; left: 100px; bottom: 40px; color: #b9fb05;
+            transform: skewX(40deg) !important;
+         width: 150px; height: 50px;}
+section.side:hover>div.btnCont{left: 700px;}
+            
+/* <<<< */
+div.btnCont span {position: absolute; right: 0; bottom: 0; font-size: 60px; }
+
+div.btnCont span:first-of-type {animation: ani 1.5s linear 0s infinite;}
+div.btnCont span:nth-of-type(2) {animation:ani 1.5s linear 0.5s infinite;}
+div.btnCont span:last-of-type {animation:ani 1.5s linear 1.0s infinite;}
+
+@keyframes ani {
+    0%{right: 0; transform: scale(1); opacity: 1;}
+    100%{right: 100px; transform: scale(1.5); opacity:0;}
+}

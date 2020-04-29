@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/* main.css */
+/* reset */
+* {margin: 0; padding: 0;}
+ol, ul {list-style: none;}
+body {position: fixed; width: 100%; height: 100%; background:#111;
+        font-family: "Orbitron", sans-serif;}
+a {text-decoration: none; color: #bbb;}
+img {border: 0;}
+.blind {position: absolute; left: 0; top: 0; height: 0; font-size: 0; line-height: 0; overflow: hidden; text-indent: -9999px;}
+
+/* wrap */
+#wrap {position: fixed; width: 100%; height: 100%; min-width: 1024px; min-height: 768px;}
+
+
+/* 햄버거버튼 */
+a.btnMenu {z-index: 100; position: fixed; left: 40px; top: 50px; font-size: 40px; color: #fff;
+        animation: ani 0.5s linear 0s infinite alternate;}
+
+@keyframes ani{
+    0% {transform: scale(1); opacity: 1;}
+    100% {transform: scale(1.5); opacity: 0.1;}
+}
+
+
+/* header */
+#wrap>header {display: none;}
+
+/* content */
+#content {z-index: 30; position: fixed; width: 100%; height: 100%; background: #555;}
+#content > section {opacity: 0; position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+#content>section.on {opacity: 1; z-index: 35;}
+
+#content>section>article {position: relative; text-align: center;}
+#content>section>article>strong {position: absolute; top: 50%; margin-top: -25px;
+                                display: block; width: 100%;
+                                font-size: 50px; color: #fff;}
+#content>section>article>span {position: absolute; top: 50%; margin-top: -15px;
+                                display: block; width: 100%;
+                                font-size: 30px; color: #fff;}
+#content>section>article>ul {position: absolute; left: 50%; top: 50%;
+                                transform: translateX(-50%) translateY(-50%);}
+#content>section>article>ul>li {float: left; margin: 0 15px;}
+#content>section>article>ul>li>a {display: inline-block; font-size: 30px; color: #fff; opacity: 0.5;
+                                    transition: all 0.5s ease 0s;}
+#content>section>article>ul>li>a:hover {transform: scale(1.2); opacity: 1;}
+
+
+
+/* Homme */
+.box1>article { float: left; height: 25%;}
+.box1>article:nth-of-type(1) {width: 50%; background: #333;}
+.box1>article:nth-of-type(2) {width: 25%; background: url(../img/m1.jpg) no-repeat 100% 50%;
+background-size: 100%;}
+.box1>article:nth-of-type(3) {width: 25%; background: #333;}
+.box1>article:nth-of-type(4) {width: 50%; height: 50%; background: url(../img/m2.jpg) no-repeat 0 50%; float: right;
+                                background-size: cover;}
+.box1>article:nth-of-type(5) {float: right; width: 25%; background: #fff url(../img/m3.jpg) no-repeat 0 50%;
+                            background-size: contain;}
+.box1>article:nth-of-type(6) {float: right; width: 25%; background: #888;}
+.box1>article:nth-of-type(7) {float: right; width: 25%; background: #111; overflow: hidden;}
+.box1>article:nth-of-type(7) video {width: 100%; }
+.box1>article:nth-of-type(8) {float: right; width: 25%;
+                                background: url(../img/m4.jpg) no-repeat 50% 50%;
+                            background-size: 100%;}
+.box1>article:nth-of-type(9) {width: 25%; height: 25%; background: #444;}
+.box1>article:nth-of-type(10) {width: 50%; height: 25%; background: url(../img/m5.jpg) no-repeat 100% 50%;
+                            background-size: cover;}
+.box1>article:nth-of-type(11) {width: 25%; height: 25%; background: #333;}
+
+/* box2 */
+.box2>article {float: left; height: 25%;}
+.box2>article:nth-of-type(1) {width: 25%; background: #333;}
+.box2>article:nth-of-type(2) {width: 25%; 
+                            background: #fff url(../img/w1.jpg) no-repeat 50% 50%;
+                            background-size: 90%;}
+.box2>article:nth-of-type(3) {width: 50%;}
+.box2>article:nth-of-type(4) {width: 25%; height: 50%;
+                                background: url(../img/w2.jpg) no-repeat 0 0;
+                                background-size: cover;}
+.box2>article:nth-of-type(5) {width: 50%; height: 50%;
+                            background: url(../img/w3.jpg) no-repeat 0 50%;
+                        background-size: 100%;}
+.box2>article:nth-of-type(6) {width: 25%;
+                            background: #fff url(../img/w4.jpg) no-repeat 50% 50%;
+                            background-size: 50%;}
+.box2>article:nth-of-type(7) {width: 25%;}
+.box2>article:nth-of-type(8) {width: 25%;
+                                background: url(../img/w5.jpg) no-repeat 0 0;
+                                background-size: cover;}
+.box2>article:nth-of-type(9) {width: 25%;}
+.box2>article:nth-of-type(10) {width: 25%;
+                                background: url(../img/w6.jpg) no-repeat 0 0;
+                                background-size: cover;}
+.box2>article:nth-of-type(11) {width: 25%;
+                                background: url(../img/w7.jpg) no-repeat 0 0;
+                                background-size: cover;}
+
+/* box3 */
+.box3>article {float: left; height: 25%;}
+.box3>article:nth-of-type(1) {width: 50%; height: 100%; background: url(../img/k1.jpg) no-repeat 0 0;
+                                background-size: 100%;}
+.box3>article:nth-of-type(2) {width: 25%; background: #777;}
+.box3>article:nth-of-type(3) {width: 25%; background: url(../img/k2.jpg) no-repeat 0 0;
+                                        background-size: 100%;}
+.box3>article:nth-of-type(4) {width: 50%; background: #111;}
+.box3>article:nth-of-type(5) {width: 25%; height: 50%; background: url(../img/k3.jpg) no-repeat 0 0;
+                                        background-size: 100%;}
+.box3>article:nth-of-type(6) {width: 25%; background: #999;}
+.box3>article:nth-of-type(7) {width: 25%; background: url(../img/k4.jpg) no-repeat 0 0;
+                             background-size: 100%;}
