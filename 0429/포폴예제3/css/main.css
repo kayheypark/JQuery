@@ -11,11 +11,12 @@ img {border: 0;}
 .blind {position: absolute; left: 0; top: 0; height: 0; font-size: 0; line-height: 0; overflow: hidden; text-indent: -9999px;}
 
 /* wrap */
-#wrap {position: fixed; width: 100%; height: 100%; min-width: 1024px; min-height: 768px;}
+#wrap {position: fixed; width: 100%; height: 100%; min-width: 1024px; min-height: 768px;
+        perspective: 900px;}
 
 
 /* 햄버거버튼 */
-a.btnMenu {z-index: 100; position: fixed; left: 40px; top: 50px; font-size: 40px; color: #fff;
+a.btnMenu {z-index: 50; position: fixed; left: 40px; top: 50px; font-size: 40px; color: #fff;
         animation: ani 0.5s linear 0s infinite alternate;}
 
 @keyframes ani{
@@ -25,14 +26,34 @@ a.btnMenu {z-index: 100; position: fixed; left: 40px; top: 50px; font-size: 40px
 
 
 /* header */
-#wrap>header {display: none;}
+#wrap>header {opacity: 0; z-index: 40; position: fixed; width: 150px; height: 100%; background:#eee;
+                transform: rotateY(120deg); transform-origin: left center;
+                transition: all 0.8s ease 0s;
+            }
+#wrap>header.on {opacity: 1; transform: rotateY(15deg);}
+
+#wrap>header>h1 {position: absolute; left: 50%; text-outline: 80px; width: 100px; margin-left: -50px;}
+#wrap>header>h1>img {width: 100%;}
+nav.gnb>ul {position: absolute; width: 100%; left: 0; top: 35%;}
+nav.gnb>ul>li>a {display: block; font-size: 18px; color: #000;
+                text-align: center; line-height: 4;}
+nav.gnb>ul>li>a:hover {color: #fff; background: #000;}
 
 /* content */
-#content {z-index: 30; position: fixed; width: 100%; height: 100%; background: #555;}
-#content > section {opacity: 0; position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+#content {z-index: 30; position: fixed; width: 100%; height: 100%; background: #000;
+        transform: rotateY(0deg); transform-origin: right center;
+        transition: all 0.8s ease 0s;}
+#content.on {transform: rotateY(-10deg);}
+
+#content > section {opacity: 0; position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+                        perspective: 700px;}
 #content>section.on {opacity: 1; z-index: 35;}
 
-#content>section>article {position: relative; text-align: center;}
+#content>section>article {position: relative; text-align: center;
+                                transform: rotateY(180deg); transform-origin: center center;
+                        transition: all 1.5s ease 0s;}
+#content>section.on>article {transform: rotateY(0deg);}
+
 #content>section>article>strong {position: absolute; top: 50%; margin-top: -25px;
                                 display: block; width: 100%;
                                 font-size: 50px; color: #fff;}
