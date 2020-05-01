@@ -1,5 +1,11 @@
 /* main.js */
 $(document).ready(function () {
+
+    $("html,body").stop().animate({"scrollTop":0},2000,"swing");
+
+
+
+
     var ht = $(window).height();
     $("section").height(ht);
 
