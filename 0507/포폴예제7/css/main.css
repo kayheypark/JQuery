@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/* reset */
+* {margin: 0; padding: 0;}
+ol, ul {list-style: none;}
+a {text-decoration: none; color: #bbb;}
+img {border: 0;}
+body {position: fixed; width: 100%; height: 100%; background: #111; color: #fff;}
+
+
+/* 로딩페이지 */
+.progress {z-index: 9999; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);
+            position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+.progress-bar {position: absolute; left: 0; top: 50%;
+                width: 0%; border-top: 1px solid rgb(160,160,160);}
+.progress-text {position: absolute; top: 50%; margin-top: 10px; width: 100%;
+                font-family: arial; font-size: 12px; text-align: center;}
+                
+.progress-complete .progress-bar {border-color: rgb(255,0,0);}
+
+
+
+
+/* 배경이미지 */
+.bg {z-index: 1; position: fixed; left: 0; top: 0; width: 100%; height: 100%;
+        background: url(../img/bgLine.png) repeat 0 0; opacity: 0.1;}
+
+/* header 로고 */
+header>h1 {z-index: 2; position: absolute; left: 50%; top: 50px; width: 400px; margin-left: -200px;}
+header>h1 img{width: 100%;}
+
+/* header sns */
+header>ul {position: absolute; right: 30px; top: 60px;}
+header>ul>li {float: left; margin-right: 10px; opacity: 0.5; transition: all 0.4s linear 0s;}
+header>ul>li>a {font-size: 25px; color: #fff;}
+header>ul>li:hover {opacity: 1; transform: scale(1.2);}
+
+
+/* nav */
+nav{z-index: 3; position: fixed; left: 0; top: 50%; width: 100%; height: 50px; margin-top: 25px;
+    background: url(../img/tr.png) repeat 0 0; }
+nav>ul {width: 1200px; height: 50px; margin: 0 auto;}
+nav>ul>li {position: relative; float: left; width: 200px; height: 50px; text-align: center;
+            perspective: 700px;}
+nav>ul>li>a {display: block; width: 200px; height: 50px; line-height: 50px;
+                font-size: 12px; font-family: orbitron; color: #aaa;
+                transition: all 0.4s linear 0s;}
+nav>ul>li:hover>a {transform: translateY(-20px);}
+
+nav>ul>li>div {opacity: 0; position: absolute; left: 0; top: -50px;
+    width: 200px; height: 300px; padding: 10px; box-sizing: border-box;
+    background: url(../img/tr.png) repeat 0 0; border: 1px solid #000;
+    transition: all 0.5s linear 0s;}
+nav>ul>li:hover>div {opacity: 1; top: -100px; transform: rotateY(360deg);}
+
+nav>ul>li>div>h2 {position: absolute; left:0; top: 100px; width: 100%; height: 50px;
+                    text-align: center; font-weight: bold; font-size: 12px; line-height: 3.5;
+                    font-family: orbitron; color: #fff;}
+nav>ul>li>div>p {width: 100%; height: 90px; border: 1px solid #333; overflow: hidden;}
+nav>ul>li>div>p>img {width: 100%; opacity: 0.5;}
+
+nav>ul>li>div>ul {position: absolute; left: 0; bottom: 0; width: 100%; }
+nav>ul>li>div>ul>li>a {display: block; width: 100%; height: 37px; border-top: 1px solid #111;
+                        color: #888; text-align: center; font-size: 11px; line-height: 2.8;}
+nav>ul>li>div>ul>li>a:hover {background: #000; color: #fff;}
+
+/* 이미지 시퀀스 프레임 */
+section{overflow: hidden;position: fixed;left: 0;top: 50%;width: 100%;height: 500px;margin-top: -250px;}
+section img{position: absolute;left: 0;top: -150px;width: 100%;}
+/* footer */
+footer {position: fixed; left: 0; bottom: 0; width: 100%; height: 30px;
+            background: #010101; border-top: 1px solid #222;}
+footer>ul {float: left; width: 40%; height: 30px; margin-left: 30px; margin-top: 3px;}
+footer>ul>li {float: left; width: 16.66%; text-align: center;}
+footer>ul>li>a {font-size: 11px; line-height: 2;font-family: arial; color: #555;}
+
+footer>p {float: right;}
