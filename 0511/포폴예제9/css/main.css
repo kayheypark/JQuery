@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* main.css */
+*{margin: 0; padding: 0;}
+ol, ul {list-style:none;}
+a {outline: 0; color: #fff; text-decoration: none;}
+img {border: 0;}
+body {width: 100%; min-width: 1400px; height: 23000px; letter-spacing: 2px; font-size: 12px;
+font-family: Orbitron;}
+
+.bg {position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+background: url(../img/bg.jpg) no-repeat 50% 0; background-size: cover;}
+
+h1 {z-index: 2; position: fixed; left: 70px; top: 40px;}
+h1 img {width: 130px;}
+
+.gnb {z-index: 2; position: fixed; right: 250px; top: 50px;}
+.gnb li {float: left; margin-left: 50px;}
+.gnb li a {display: inline-block; color: #fff; font-weight: bold; font-size: 14px;
+            opacity: 0.5; transition: all 0.5s linear 0s;}
+.gnb li a:hover {opacity: 1; transform: scale(1.5);}
+
+.sns {z-index: 2; position: fixed; right: 50px; top: 50px;}
+.sns li {float: left; margin-left: 30px;}
+.sns li a {display: inline-block; color: #fff; font-size: 18px;
+            opacity: 0.5; transition: all 0.5s linear 0s;}
+.sns li a:hover {opacity: 1; transform: scale(1.5);}
+
+.snb {z-index: 2; position: fixed; left: 100px; top: 300px;}
+.snb li {position: relative; width: 150px; height: 35px; margin-bottom: 20px;
+     color: #fff; text-align: center; font-size: 12px; cursor: pointer;}
+.snb li span {position: absolute; top: 0; left: 0; width: 3%; height: 100%;
+        box-shadow: 1px 1px 1px #000; transform: skewX(-30deg);}
+
+.snb li:nth-child(1) span {background: #ff0f51;}
+.snb li:nth-child(2) span {background: #fffb02;}
+.snb li:nth-child(3) span {background: #b57de4;}
+.snb li:nth-child(4) span {background: #7cf923;}
+.snb li:nth-child(5) span {background: #3dbdfa;}
+.snb li.on span {width: 100%;}
+
+.snb li em {position: absolute; left: 20px; top: 8px; color: #fff;
+        text-shadow: 1px 1px 1px #000; font-weight: bold; font-size: 14px;}
+
+.copyright {z-index: 2; position: fixed; right: 30px; bottom: 20px;
+            color: #555; font-size: 11px; font-family: arial;}
+
+section {z-index: 1; position: fixed; left: 50%; top: 50%; width: 1200px; height: 700px;
+        margin-left: -600px; margin-top: -350px;
+        perspective: 2300px;}
+section > article {z-index: 8; position: absolute; left: 0px; top: 0;
+                    width: 1200px; height: 700px; opacity: 0.5; }
+section > article.on {z-index: 9; opacity: 1;}
+
+section > article:nth-child(1) {transform: translateZ(0px);}
+section > article:nth-child(2) {transform: translateZ(-5000px);}
+section > article:nth-child(3) {transform: translateZ(-10000px);}
+section > article:nth-child(4) {transform: translateZ(-15000px);}
+section > article:nth-child(5) {transform: translateZ(-20000px);}
+
+section > article > p {width: 450px; padding: 30px 60px; 
+                        color: #fff; opacity: 1;}
+
+section > article > p > span {font-size: 60px; font-family: orbitron; letter-spacing: 0;
+                                line-height: 1.5;}
+
+/* box1 */
+section > article:nth-child(1) p {position: absolute; right: -10px; bottom: 10px;}
+section > article:nth-child(1) p span {color: #ff0f51;}
+.obj11 {position: absolute; left: -270px; bottom: -100px;}
+.obj12 {position: absolute; right: -593px; top: -85px;}
+.obj13 {position: absolute; left: -100px; bottom: 20px;}
+
+
+/* box2 */
+section > article:nth-child(2) p {position: absolute; left: 100px; bottom: 200px;}
+section > article:nth-child(2) p span {color: #fffb02;}
+.obj21 {position: absolute; right: -710px; bottom: -420px;}
+.obj22 {position: absolute; right: -50px; bottom: -100px;}
+
+
+/* box3 */
+section > article:nth-child(3) p {position: absolute; right: -100px; bottom: 300px;}
+section > article:nth-child(3) p span {color: #b57de4;}
+.obj31 {position: absolute; right: 110px; bottom: 70px;}
+.obj32 {position: absolute; left: 100px; bottom: -160px;}
+
+
+
+/* box4 */
+section > article:nth-child(4) p {position: absolute; bottom: 290px; left: 100px;}
+section > article:nth-child(4) p span {color: #7cf923;}
+.obj41 {position: absolute; left: 350px; bottom: -150px;}
+.obj42 {position: absolute; right: 167px; top: -255px;}
+.obj42 {position: absolute; right: -100px; bottom: -120px;}
+
+
+/* box5 */
+section > article:nth-child(4) p {position: absolute; right: -150px; bottom: 100px;}
+section > article:nth-child(4) p span {color: #3dbdfa;}
+.obj51 {position: absolute; left: -100px; bottom: -290px;}
+.obj52 {position: absolute; right: 30px; top: 170px;}
+.obj53 {position: absolute; left: -20px; bottom: 0px;}
