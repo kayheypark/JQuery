@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox 기본</title>
+<style>
+    * {margin: 0; padding: 0; list-style: none;}
+
+    ul {display: flex; align-items: stretch;border: 1px solid red;}
+    /*
+
+    display:flex; 부모요소를 플렉스 컨테이너로 설정
+    :flex 플렉스 박스를 박스레벨요소로 정의,
+    :inline-flex 플렉스 박스를 인라인레벨요소로 정의
+
+    플렉스항목 배치 방향 지정
+    flex-direction: row 기본값, column, row-reverse, column-reverse
+
+    플렉스 항목을 주축 방향으로 배치할때
+    justyfy-content:flex-start, flex-end, center, space-between, space-around
+
+    플렉스 항목을 교차축 기준으로 배치할 때
+    align-items:stretch 기본값, flex-start, flex-end, center, baseline
+
+    */
+    li {width: 100px; height: 100px; background-color: aqua; margin: 8px;}
+</style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+</html>
