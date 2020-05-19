@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox 기본</title>
+<style>
+    * {margin: 0; padding: 0; list-style: none;}
+
+    ul {display: flex;
+    border: 1px solid red; height: 500px;}
+    /*
+        플렉스 항목의 크기 조절
+        flex:flex-grow flex-shrink flex-basis
+        flex-glow 플렉스 항목의 너비를 얼마나 늘릴지 숫자로 지정.
+        flex-shrink 플렉스 항목의 너비를 얼마나 줄일지 숫자로 지정.
+        flex-basis 플렉스 항목의 기본 크기를 지정한다. width 속성처럼 너비 값을 지정할 수 있고,
+                    0이나 auto를 지정가능. 0일 경우 flex-growm flex-shrink, 인 인수 값을 함께 사용하고
+                    auto일 경우 플렉스 항목의 너비값을 사용함
+                    flex:initial 항목의 width/height 값에 의해 크기가 결정되는데 플렉스 컨테이너의 공간이 부족할 경우, 최소 크기까지 줄인다.
+                    flex:auto 항목의 width/height 값에 의해 크기가 결정되지만 플렉스 컨테이너의 공간에 따라 늘어나거나 줄인다.
+    */
+    li {width: 100px; height: 100px; background-color: aqua; margin: 8px;}
+    ul:nth-of-type(1) li:nth-child(1) {flex: 1;}
+    ul:nth-of-type(1) li:nth-child(2) {flex: 1 0 0;}
+    ul:nth-of-type(1) li:nth-child(3) {flex: 1 0 0;}
+    ul:nth-of-type(1) li:nth-child(4) {flex: 1 0 0;}
+    ul:nth-of-type(1) li:nth-child(5) {flex: 1 0 0;}
+
+
+    ul:nth-of-type(2) li:nth-of-type(1){flex: 5 0 0;}
+    ul:nth-of-type(2) li:nth-of-type(2){flex: 1 0 0;}
+    ul:nth-of-type(2) li:nth-of-type(3){flex: 1 0 0;}
+    ul:nth-of-type(2) li:nth-of-type(4){flex: 1 0 0;}
+    ul:nth-of-type(2) li:nth-of-type(5){flex: 1 0 0;}
+
+    
+</style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+</html>

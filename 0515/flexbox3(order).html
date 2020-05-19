@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox 기본</title>
+<style>
+    * {margin: 0; padding: 0; list-style: none;}
+
+    ul {display: flex; flex-wrap: wrap; align-content:  space-between; border: 1px solid red; height: 500px;}
+    /*
+        플렉스 항목 배치 순서 바꾸기
+    */
+    li {width: 100px; height: 100px; background-color: aqua; margin: 8px;}
+    li:nth-child(1) {order: 1;}
+    li:nth-child(2) {order: 2;}
+    li:nth-child(3) {order: 3;}
+    li:nth-child(4) {order: 1;}
+    li:nth-child(5) {order: 4;}
+    li:nth-child(6) {order: 1;}
+</style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/*main.css*/
+*{-webkit-text-size-adjust: none;}
+/* 모바일 웹킷 브라우저는 뷰포트가 변할 때 텍스트 크기를 자동으로 조절한다. 텍스트 크기 조절 금지할때 사용.*/
+body {color: #666; font-size: 14px; font-family: Helbetica, AppleGothic, "돋움", Dotum;}
+a {color: #333; text-decoration: none;}
+a:visited {color: #333;}
+a:hover, a:active {color: #333; text-decoration: none;}
+
+/* layout */
+body > header {width: 100%;}
+body > section {width: 100%;}
+body > footer {width: 100%;}
+
+/* header */
+.header_wrap {position: relative; background: url(../images/bg_top_gnb.png) repeat-x 0 0;}
+body > header h1 {text-align: center; font-size: 16px; padding: 7px;}
+body > header h1 a {color: #fff; text-shadow: 0 -1px 1px #000;}
+.srch_icon {position: absolute; right: 16px; top: 10px;}
+.srch_box {display: none; width: 100%; height: 42px; background: #cf0808;}
+.srch_box.open {display: block;}
+.srch_box form fieldset {width: 85%; height: 32px; margin: 0 auto;
+                        background: #fff; border-radius: 8px; text-align: right;}
+input[type="search"]{width: 80%; height: 32px; vertical-align: top;
+                    border: none;}
+.gnb {width: 100%; }
+.gnb:after {content: ""; display: block; clear: both;}
+.gnb ul {width: 100%; display: flex; flex-direction: row;}
+.gnb li {/*float: left; width: 25%;*/ flex: 1;}
+.gnb li a {display: block; border: 1px solid #ccc; border-right: none;
+            height: 31px; line-height: 31px; text-align: center;
+            background: #f6f6f6;}
+
+/* section */
+body > section >h2 {color: #cd0000; font-size: 16px; font-weight: bold;
+                    height: 45px; line-height: 45px;}
+body > section > ul:nth-of-type(1) li {border-top: 1px solid #dcdcdc;}
+body > section > ul:nth-of-type(1) li a {display: block; height: 20px; padding: 5px 0 0 10px;}
+body > section > ul:nth-of-type(2) {width: 100%; display: flex; flex-direction: row;}
+body > section > ul:nth-of-type(2):after {content: ""; display: block; clear: both;}
+body > section > ul:nth-of-type(2) li {/*float: left; width: 33.33%;*/ flex: 1;
+                                        height: 100px; box-sizing: border-box; border: 1px solid red; text-align: center;}
+body > section > ul:nth-of-type(2) li img {display: block;
+                                            width: 85px;height: 60px; margin: 0 auto; border: 1px solid #000;}
+
+.notice {width: 100%; height: 20px; background: #f3f3f3;
+            border-top: 1px solid #dcdcdc; border-bottom: 1px solid #dcdcdc;
+                padding-top: 7px; margin: 10px 0 5px 0;}
+.notice span {color: #cd0000; font-weight: bold;}
+
+.banner {width: 100%; height: 43px; background: #424242;}
+.banner a {color: #fff;}
+
+body > footer {position: relative; background: #424242;
+                border-top: 1px solid #aeaeae; margin-top: 5px;
+                text-align: center; font-size: 15px;}
+.foot_inner {display: flex; flex-direction: column;
+            justify-content: center; align-items: center;        
+            background: #dcdcdc; padding: 20px 0;}
+.foot_inner ul {flex: auto; display: flex; flex-direction: row;}
+.foot_inner ul li {/*display: inline-block;*/ flex: auto;}
+
+.foot_inner ul:nth-of-type(1) li {background: url("../images/bg_bar.png") no-repeat 100% 50%; pr10   margin-right: 10px;}
+.foot_inner ul:nth-of-type(1) li:last-child {background: none; margin-right: 0;}
+
+.foot_inner ul:nth-of-type(2) li {margin: 10px 0;
+                                    background: #fff; box-shadow: 0 1px 1px #666;}
+
+.foot_inner ul:nth-of-type(2) li a {display: block; height: 26px; padding: 0 8px; line-height: 26px; border: 1px solid #aaaaaa;
+                                    font-size: 80%; color: #222; letter-spacing: -1px;}
+.foot_inner ul:nth-of-type(3) {font-size: 12px;}
+
+body > footer > p {text-align: left; color: #ccc; font-size: 12px; padding: 5px 0;}
+body > footer > a {position: absolute; right: 0; bottom: 0;}

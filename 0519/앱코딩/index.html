@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App</title>
+    <!-- 상태 바의 색상을 정하는 코드 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 모바일 웹을 웹앱 형태로 설정하는 코드 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- 바로가기 아이콘, 아이폰, 안드로이드 둘 다 적용 -->
+    <link rel="apple-touch-icon-precomposed" href=".png" />
+    <!-- 인트로 화면을 설정하는 코드 -->
+    <link rel="apple-touch-startup-image" href=".png" />
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+
+</head>
+<body>
+    <header>
+        <div class="header_wrap">
+            <h1 class="logo"><a href="#">MOBILE</a></h1>
+            <a href="#" class="srchBtn"><span class="srch_icon"><img src="images/btn_search.png" alt="검색박스 열기" /></span></a>
+            <div class="srch_box">
+                <form action="" method="POST">
+                <fieldset>
+                <legend class="blind">검색</legend>
+                    <label for="srch" class="blind">검색어 입력</label>
+                    <input type="search" id="srch" />
+                    <input type="image" src="images/btn_down_search.png" alt="검색버튼" />
+                </fieldset>
+                </form>
+            </div>
+        </div>
+        <nav class="gnb">
+            <ul>
+                <li><a href="#">COMPANY</a></li>
+                <li><a href="#">PROJECT</a></li>
+                <li><a href="#">RECRUIT</a></li>
+                <li><a href="#">NOTICE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Today's Story</h2>
+        <ul>
+            <li><a href="#">웹표준에 대해서 알아봅시다.</a></li>
+            <li><a href="#">웹접근성에 대해서 알아봅시다.</a></li>
+            <li><a href="#">HTML5와 CSS3에 대해서 알아봅시다.</a></li>
+            <li><a href="#">javascript 와 JQuery에 대해서 알아봅시다.</a></li>
+        </ul>
+        <ul>
+            <li><a href="#"><img src="" alt="" width="85" height="60" /> HTML5와CSS3로 만든 모바일</a></li>
+            <li><a href="#"><img src="" alt="" width="85" height="60" /> HTML5와CSS3로 만든 모바일</a></li>
+            <li><a href="#"><img src="" alt="" width="85" height="60" /> HTML5와CSS3로 만든 모바일</a></li>
+        </ul>
+        <p class="notice"><a href="#"><span>공지사항</span>모바일 사이트 리뉴얼 오픈</a></p>
+        <div class="banner"><a href="#"><span>모바일!<br />사이트 제작 하기</span></a></div>
+    </section>
+    <footer>
+        <div class="foot_inner">
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">메뉴보기</a></li>
+                <li><a href="#">전체보기</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">PC버전</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">개인정보취급방침</a></li>
+                <li><a href="#">이용약관</a></li>
+            </ul>
+        </div>
+        <p><small>COPYRIGHT&copy;2020 mobile. ALL RIGHTS RESERVED</small></p>
+        <a href="#"><img src="images/btn_bot_top.png" alt="top" /></a>
+    </footer>
+    
+</body>
+</html>

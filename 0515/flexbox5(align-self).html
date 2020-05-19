@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-self</title>
+<style>
+    * {margin: 0; padding: 0; list-style: none;}
+
+    ul {display: flex;
+    border: 1px solid red; height: 500px;}
+    /*
+        교차축을 기준으로 하는 배치 방법 조절
+        align-self : auto | stretch 기본값 | flex-start | end center base
+    */
+    li {width: 100px; /*height: 100px;*/ background-color: aqua; margin: 8px;}
+    li:nth-child(1) {align-self: auto;}
+    li:nth-child(2) {align-self: stretch;}
+    li:nth-child(3) {align-self: flex-start;}
+
+    li:nth-child(4) {align-self: flex-end;}
+    li:nth-child(5) {align-self: center;}
+
+    li:nth-child(6) {align-self: baseline; font-size: 50px;}
+    li:nth-child(7) {align-self: baseline; font-size: 30px;}
+    li:nth-child(8) {align-self: baseline;}
+    
+
+    
+</style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+</body>
+</html>
