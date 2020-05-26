@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로져</title>
+    <script>
+
+        /*
+        
+        클로저 Closure - 일반적으로 함수 내 지역변수는 함수 밖에서 참조할 수 없지만,
+        크로저는 함수 내 지역 변수를 함수밖에서도 참조할 수 있게 해준다.
+        
+        1. 리턴값을 함수로 만든다.
+        2. 변수에 함수호출을 저장한다.
+        3. 변수를 함수로 호출한다.
+        
+        */
+
+        function add(){
+            var n=0;
+            return ++n;
+        }
+
+        console.log(add());
+        console.log(add());
+
+        function add(){
+            var n=0;
+            return function(){
+                return ++n;
+            }
+        }
+        var incre = add(); // var incre = function(){return ++n;}
+
+        console.log(incre());
+        console.log(incre());
+
+
+//문제
+        function multiply1 (n){
+         return n *= n;
+        }
+        console.log(multiply1(10));
+        console.log(multiply1(10));
+
+//closure
+        function multiply(n) {
+            return function(){
+                return n *= n;
+            }
+        }
+        var num1 = multiply(10); // var num1 = function(){return n *= n;}
+        console.log(num1()); // 10 * 10 = 100
+        console.log(num1()); // 100 * 100 = 10000
+
+        var num2 = multiply(20); // var num2 = function(){return n *= n;}
+        console.log(num2()); // 20 * 20 = 400
+        console.log(num2()); // 400 * 400 = 160000
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

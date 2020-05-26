@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로토타입</title>
+    <script>
+/*
+
+prototype 프로토타입
+객체의 메서드는 속성과 달리 값의 변화가 없기 때문에 불필요하게 상속시켜 메모리를 낭비할 필요가 없다.
+객체의 메서드를 생성자 함수 안에 정의하지 않고도 생성된 객체에서 호출해서 사용할 수 있다.
+즉, 객체의 메서드는 생성자 함수 밖에서 프로토타입으로 만들어도 새로만든 객체에서 사용할 수 있다.
+
+*/
+
+function Triangle(b,h) {
+    this.base = b;
+    this.height = h;
+}
+Triangle.prototype.area=function(){
+    return this.base * this.height/2;
+};
+Triangle.prototype.printOut = function(){
+    return '밑변:' + this.base+ ' 높이:' + this.height + ' 넓이:' + this.area();
+}
+
+var triangle1  = new Triangle(30,20);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
